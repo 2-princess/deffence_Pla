@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public int killPoint;
     public Text stageCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    void Awake()
+    {
+        gM = this;
+    }
     void Start()
     {
 

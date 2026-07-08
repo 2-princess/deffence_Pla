@@ -6,7 +6,6 @@ public class EnermyManger : MonoBehaviour
 
     public List<GameObject> enermyPool = new List<GameObject>();
     public GameObject enermy;
-    public GameManager gM;
     public Transform wayPoints;
     private float responTime = 0;
 

@@ -12,10 +12,7 @@ public class EnermyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (current < wayPoints.childCount)
-        {
-            GoWay();
-        }
+        GoWay();
     }
     public void Init(Transform points)
     {
