@@ -9,6 +9,7 @@ public class EnermyController : MonoBehaviour
     int current = 0;
     public float currentHp;
     public float currentSpeed;
+    public int currentGold;
     private Transform wayPoints;
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class EnermyController : MonoBehaviour
         current = 0;
         currentHp = enermyStatus.hp;
         currentSpeed = enermyStatus.speed;
+        currentGold = enermyStatus.money;
 
     }
     void GoWay()
@@ -43,6 +45,7 @@ public class EnermyController : MonoBehaviour
         currentHp -= damage;
         if (currentHp < 0)
         {
+            GameManager.Instance.money += currentGold;
             enermy.SetActive(false);
         }
     }

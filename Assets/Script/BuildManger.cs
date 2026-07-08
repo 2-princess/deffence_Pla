@@ -34,13 +34,15 @@ public class BuildManger : MonoBehaviour
         {
             // Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
             TileInfo tileInfo = hit.collider.GetComponent<TileInfo>();
-            if (hit.collider.CompareTag("BuildTile") && tileInfo.isBuild != true)
+
+            if (hit.collider.CompareTag("Create") && tileInfo.isBuild != true && GameManager.Instance.money >= 30)
             {
                 Vector3 buildPos = hit.collider.transform.position;
                 buildPos.y = 1;
                 int rand = Random.Range(0, currentTower.Count);
                 Instantiate(currentTower[rand], buildPos, Quaternion.identity);
                 tileInfo.isBuild = true;
+                GameManager.Instance.money -= 30;
             }
         }
     }

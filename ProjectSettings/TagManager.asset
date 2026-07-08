@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enermy
   - BuildTile
+  - Create
   layers:
   - Default
   - TransparentFX

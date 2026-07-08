@@ -4,11 +4,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public int stage = 1;
+    private int stage = 1;
     private float count = 10;
-    public int money;
-    public int killPoint;
+    public int money = 300;
+    private int killPoint;
     public Text stageCount;
+    public Text gold;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
@@ -23,6 +24,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StageGold();
+    }
+
+
+    void StageGold()
+    {
         count -= Time.deltaTime;
         if (count < 1)
         {
@@ -30,5 +37,6 @@ public class GameManager : MonoBehaviour
             count = 10;
         }
         stageCount.text = stage.ToString();
+        gold.text = "GOLD: " + money.ToString();
     }
 }
