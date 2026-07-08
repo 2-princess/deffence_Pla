@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager gM;
+    public static GameManager Instance;
     public int stage = 1;
     private float count = 10;
     public int money;
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        gM = this;
+        Instance = this;
     }
     void Start()
     {

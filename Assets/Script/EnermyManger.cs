@@ -3,12 +3,16 @@ using UnityEngine;
 
 public class EnermyManger : MonoBehaviour
 {
-
+    public static EnermyManger Instance;
     public List<GameObject> enermyPool = new List<GameObject>();
     public GameObject enermy;
     public Transform wayPoints;
     private float responTime = 0;
 
+    void Awake()
+    {
+        Instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
