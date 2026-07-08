@@ -1,8 +1,8 @@
 [System.Serializable]
 public class EnermyStatus
 {
-    public float hp;
-    public float speed;
+    public float hp = 200;
+    public float speed = 2;
     public float shild;
-    public int money;
+    public int money = 20;
 }

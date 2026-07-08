@@ -7,6 +7,8 @@ public class EnermyController : MonoBehaviour
     public GameObject enermy;
     public EnermyStatus enermyStatus;
     int current = 0;
+    public float currentHp;
+    public float currentSpeed;
     private Transform wayPoints;
 
     // Update is called once per frame
@@ -18,10 +20,13 @@ public class EnermyController : MonoBehaviour
     {
         wayPoints = points;
         current = 0;
+        currentHp = enermyStatus.hp;
+        currentSpeed = enermyStatus.speed;
+
     }
     void GoWay()
     {
-        transform.position = Vector3.MoveTowards(transform.position, wayPoints.GetChild(current).position, enermyStatus.speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, wayPoints.GetChild(current).position, currentSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, wayPoints.GetChild(current).position) < 0.1f)
         {
             current++;
@@ -35,8 +40,8 @@ public class EnermyController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        enermyStatus.hp -= damage;
-        if (enermyStatus.hp < 0)
+        currentHp -= damage;
+        if (currentHp < 0)
         {
             enermy.SetActive(false);
         }

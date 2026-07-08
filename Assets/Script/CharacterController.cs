@@ -35,6 +35,7 @@ public class CharacterController : MonoBehaviour
     public void AttackStart(Transform enermy)
     {
         target = enermy;
+        currentTime += characterStatus.attackSpeed;
     }
     public void AttackEnd()
     {
