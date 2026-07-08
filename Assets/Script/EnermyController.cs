@@ -9,6 +9,7 @@ public class EnermyController : MonoBehaviour
     int current = 0;
     public float currentHp;
     public float currentSpeed;
+    public float currentAttack;
     public int currentGold;
     private Transform wayPoints;
 
@@ -24,6 +25,7 @@ public class EnermyController : MonoBehaviour
         currentHp = enermyStatus.hp;
         currentSpeed = enermyStatus.speed;
         currentGold = enermyStatus.money;
+        currentAttack = enermyStatus.attack;
 
     }
     void GoWay()
@@ -35,6 +37,8 @@ public class EnermyController : MonoBehaviour
             if (current >= wayPoints.childCount)
             {
                 gameObject.SetActive(false);
+                GameManager.Instance.userHp -= currentAttack;
+                GameManager.Instance.Life();
                 return;
             }
         }
@@ -46,6 +50,7 @@ public class EnermyController : MonoBehaviour
         if (currentHp < 0)
         {
             GameManager.Instance.money += currentGold;
+            GameManager.Instance.Gold();
             enermy.SetActive(false);
         }
     }
