@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Text stageCount;
     public Text gold;
     public Text hp;
+    public Text delayTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
@@ -39,5 +40,12 @@ public class GameManager : MonoBehaviour
     public void StageCount(int stage)
     {
         stageCount.text = stage.ToString();
+    }
+    public void TimerStart(float time)
+    {
+        float second = time % 60;
+        int sec = (int)second;
+        int milli = (int)((second - sec) * 100);
+        delayTime.text = sec.ToString("00") + ":" + milli.ToString("00");
     }
 }

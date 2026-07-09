@@ -19,7 +19,6 @@ public class EnermyManger : MonoBehaviour
     }
     public void SponMonster(int count)
     {
-        WaveManger.Instance.sponCount++;
         EnermyController enermy = EnermyPools.Instance.GetEnermy();
         enermy.transform.position = movePoint.GetChild(0).transform.position;
         enermy.Init(movePoint);
