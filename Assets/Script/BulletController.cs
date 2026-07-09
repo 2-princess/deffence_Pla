@@ -1,6 +1,4 @@
 
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletController : MonoBehaviour
@@ -39,8 +37,11 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
-        if (target != null) MoveShoot();
-        // 적이 사라지면 처리
+        if (target != null)
+        {
+            MoveShoot();
+        }
+        // 적이 중간에 사라지면 처리
         if (target == null || !target.gameObject.activeInHierarchy) bullet.SetActive(false);
     }
 }

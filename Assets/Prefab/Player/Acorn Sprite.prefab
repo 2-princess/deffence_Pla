@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatus
   level: 0
   attack: 25
-  attackSpeed: 5
+  attackSpeed: 0.5
   bulletSpeed: 5
   criticalPer: 0
   criticalDamage: 0
