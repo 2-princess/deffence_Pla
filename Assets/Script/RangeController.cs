@@ -10,20 +10,22 @@ public class RangeController : MonoBehaviour
         characterController = GetComponentInParent<CharacterController>();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.CompareTag("Enermy"))
+        if (other.CompareTag("Enermy"))
         {
-            characterController.Aim(collision.transform);
+            characterController.Aim(other.transform);
             // Debug.Log(transform.parent.gameObject.name + " : 적이 들어옴");
         }
     }
-    void OnTriggerExit2D(Collider2D collision)
+
+    void OnTriggerExit(Collider other)
     {
-        if (collision.CompareTag("Enermy"))
+        if (other.CompareTag("Enermy"))
         {
             characterController.AttackEnd();
             // Debug.Log("적이 나감");
         }
     }
+
 }

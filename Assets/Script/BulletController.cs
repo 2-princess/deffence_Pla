@@ -8,17 +8,18 @@ public class BulletController : MonoBehaviour
     private float damage;
     private float bulletSpeed; // 투사체속도
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.CompareTag("Enermy"))
+        if (other.CompareTag("Enermy"))
         {
             // 데미지주기위해 EnermyController호출
-            EnermyController enermyController = collision.GetComponent<EnermyController>();
+            EnermyController enermyController = other.GetComponent<EnermyController>();
             enermyController.TakeDamage(damage);
             bullet.SetActive(false);
             // Debug.Log(collision.name);
         }
     }
+
 
     public void Target(Transform targetTing, float damage, float bulletSpeed)
     {

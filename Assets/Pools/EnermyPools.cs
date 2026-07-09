@@ -5,7 +5,9 @@ public class EnermyPools : MonoBehaviour
 {
     public static EnermyPools Instance;
     public GameObject enermy;
+    public GameObject enermyLv2;
     public List<EnermyController> enermyPool = new List<EnermyController>();
+    public List<EnermyController> enermyPoolLv2 = new List<EnermyController>();
     void Awake()
     {
         Instance = this;
@@ -13,13 +15,19 @@ public class EnermyPools : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int i = 0; i < 40; i++)
+        for (int i = 0; i < 20; i++)
         {
-            // 에너미를 컨트롤러로 사용하기위해
-            enermy = Instantiate(enermy, transform.position, Quaternion.identity, transform);
-            EnermyController controller = enermy.GetComponent<EnermyController>();
+            GameObject enermy1 = Instantiate(enermy, transform.position, Quaternion.identity, transform);
+            // GameObject enermy2 = Instantiate(enermyLv2, transform.position, Quaternion.identity, transform);
+
+            EnermyController controller = enermy1.GetComponent<EnermyController>();
+            // EnermyController controllerLv2 = enermy2.GetComponent<EnermyController>();
+
             enermyPool.Add(controller);
+            // enermyPoolLv2.Add(controllerLv2);
+
             enermyPool[i].gameObject.SetActive(false);
+            // enermyPoolLv2[i].gameObject.SetActive(false);
         }
     }
     public EnermyController GetEnermy()
