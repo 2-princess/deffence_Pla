@@ -4,9 +4,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    private float count = 10;
-    private int stage = 1;
-    private int killPoint;
     public int money = 300;
     public float userHp = 2000;
     public Text stageCount;
@@ -22,25 +19,12 @@ public class GameManager : MonoBehaviour
     {
         Life();
         Gold(0);
-        StageCount();
+        StageCount(1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Window();
-    }
-
-
-    void Window()
-    {
-        count -= Time.deltaTime;
-        if (count < 1)
-        {
-            stage++;
-            StageCount();
-            count = 10;
-        }
     }
 
     public void Life()
@@ -52,7 +36,7 @@ public class GameManager : MonoBehaviour
         money += x;
         gold.text = "GOLD: " + money.ToString();
     }
-    public void StageCount()
+    public void StageCount(int stage)
     {
         stageCount.text = stage.ToString();
     }

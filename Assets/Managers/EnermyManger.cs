@@ -3,7 +3,6 @@ using UnityEngine;
 public class EnermyManger : MonoBehaviour
 {
     public static EnermyManger Instance;
-    private float responTime = 0;
     public Transform movePoint;
 
     void Awake()
@@ -17,13 +16,12 @@ public class EnermyManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        responTime += Time.deltaTime;
-        if (responTime > 2)
-        {
-            EnermyController enermy = EnermyPools.Instance.GetEnermy();
-            enermy.transform.position = movePoint.GetChild(0).transform.position;
-            enermy.Init(movePoint);
-            responTime = 0;
-        }
+    }
+    public void SponMonster(int count)
+    {
+        WaveManger.Instance.sponCount++;
+        EnermyController enermy = EnermyPools.Instance.GetEnermy();
+        enermy.transform.position = movePoint.GetChild(0).transform.position;
+        enermy.Init(movePoint);
     }
 }

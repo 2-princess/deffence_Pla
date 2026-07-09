@@ -49,17 +49,18 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.16f1/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Script/BuildManger.cs" />
     <Compile Include="Assets/Script/CharacterController.cs" />
     <Compile Include="Assets/Info/TileInfo.cs" />
     <Compile Include="Assets/Pools/EnermyPools.cs" />
-    <Compile Include="Assets/Script/GridManger.cs" />
     <Compile Include="Assets/Pools/BulletPools.cs" />
-    <Compile Include="Assets/Script/EnermyManger.cs" />
+    <Compile Include="Assets/Managers/EnermyManger.cs" />
+    <Compile Include="Assets/Managers/GameManager.cs" />
     <Compile Include="Assets/Script/EnermyController.cs" />
-    <Compile Include="Assets/Script/GameManager.cs" />
     <Compile Include="Assets/Info/CharacterStatus.cs" />
     <Compile Include="Assets/Script/RangeController.cs" />
+    <Compile Include="Assets/Managers/BuildManger.cs" />
+    <Compile Include="Assets/Managers/GridManger.cs" />
+    <Compile Include="Assets/Managers/WaveManger.cs" />
     <Compile Include="Assets/Info/EnermyStatus.cs" />
     <Compile Include="Assets/Script/BulletController.cs" />
   </ItemGroup>
