@@ -17,12 +17,12 @@ public class EnermyPools : MonoBehaviour
         {
             // 에너미를 컨트롤러로 사용하기위해
             enermy = Instantiate(enermy, transform.position, Quaternion.identity, transform);
-            EnermyController controller = enermy.AddComponent<EnermyController>();
+            EnermyController controller = enermy.GetComponent<EnermyController>();
             enermyPool.Add(controller);
             enermyPool[i].gameObject.SetActive(false);
         }
     }
-    public EnermyController SpawnEnermy()
+    public EnermyController GetEnermy()
     {
         for (int i = 0; i < enermyPool.Count; i++)
         {

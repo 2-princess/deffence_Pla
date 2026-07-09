@@ -105,11 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909df3f91df6e4bf9a83110c6dcb15a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyController
-  enermyStatus: {fileID: 0}
-  currentHp: 0
-  currentSpeed: 0
-  currentAttack: 0
-  currentGold: 0
+  enermyStatus: {fileID: 7271949091222941092}
+  currentHp: 200
+  currentSpeed: 2
+  currentAttack: 30
+  currentGold: 20
 --- !u!58 &8576335231043662461
 CircleCollider2D:
   m_ObjectHideFlags: 0

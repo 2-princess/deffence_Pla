@@ -231,6 +231,6 @@ MonoBehaviour:
   level: 0
   attack: 20
   attackSpeed: 5
-  bulletSpeed: 6
+  bulletSpeed: 8
   criticalPer: 0
   criticalDamage: 0

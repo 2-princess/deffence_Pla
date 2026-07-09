@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  characterStatus: {fileID: 0}
+  characterStatus: {fileID: 2051942916758440992}
 --- !u!114 &2051942916758440992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,9 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatus
   level: 0
-  attack: 0
-  attackSpeed: 0
-  bulletSpeed: 0
+  attack: 23
+  attackSpeed: 5
+  bulletSpeed: 6
   criticalPer: 0
   criticalDamage: 0
 --- !u!1 &5384902470179046190

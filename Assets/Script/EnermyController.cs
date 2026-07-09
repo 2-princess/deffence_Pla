@@ -30,6 +30,10 @@ public class EnermyController : MonoBehaviour
         currentGold = enermyStatus.money;
         currentAttack = enermyStatus.attack;
     }
+
+    void Start()
+    {
+    }
     public void GoWay()
     {
         transform.position = Vector3.MoveTowards(transform.position, wayPoints.GetChild(current).position, currentSpeed * Time.deltaTime);
@@ -39,6 +43,7 @@ public class EnermyController : MonoBehaviour
             if (current >= wayPoints.childCount)
             {
                 gameObject.SetActive(false);
+                currentHp = enermyStatus.hp;
                 GameManager.Instance.userHp -= currentAttack;
                 GameManager.Instance.Life();
                 return;
@@ -54,6 +59,7 @@ public class EnermyController : MonoBehaviour
             GameManager.Instance.money += currentGold;
             GameManager.Instance.Gold();
             gameObject.SetActive(false);
+            currentHp = enermyStatus.hp;
         }
     }
 }
