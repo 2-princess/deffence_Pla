@@ -17,9 +17,9 @@ public class EnermyManger : MonoBehaviour
     void Update()
     {
     }
-    public void SponMonster(int count)
+    public void SponMonster(int lv)
     {
-        EnermyController enermy = EnermyPools.Instance.GetEnermy();
+        EnermyController enermy = EnermyPools.Instance.GetEnermy(lv);
         enermy.transform.position = movePoint.GetChild(0).transform.position;
         enermy.Init(movePoint);
     }

@@ -18,26 +18,35 @@ public class EnermyPools : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             GameObject enermy1 = Instantiate(enermy, transform.position, Quaternion.identity, transform);
-            // GameObject enermy2 = Instantiate(enermyLv2, transform.position, Quaternion.identity, transform);
+            GameObject enermy2 = Instantiate(enermyLv2, transform.position, Quaternion.identity, transform);
 
             EnermyController controller = enermy1.GetComponent<EnermyController>();
-            // EnermyController controllerLv2 = enermy2.GetComponent<EnermyController>();
+            EnermyController controllerLv2 = enermy2.GetComponent<EnermyController>();
 
             enermyPool.Add(controller);
-            // enermyPoolLv2.Add(controllerLv2);
+            enermyPoolLv2.Add(controllerLv2);
 
             enermyPool[i].gameObject.SetActive(false);
-            // enermyPoolLv2[i].gameObject.SetActive(false);
+            enermyPoolLv2[i].gameObject.SetActive(false);
         }
     }
-    public EnermyController GetEnermy()
+    public EnermyController GetEnermy(int lv)
     {
-        for (int i = 0; i < enermyPool.Count; i++)
+        List<EnermyController> enermyList;
+        if (lv > 1)
         {
-            if (!enermyPool[i].gameObject.activeInHierarchy)
+            enermyList = enermyPoolLv2;
+        }
+        else
+        {
+            enermyList = enermyPool;
+        }
+        for (int i = 0; i < enermyList.Count; i++)
+        {
+            if (!enermyList[i].gameObject.activeInHierarchy)
             {
-                enermyPool[i].gameObject.SetActive(true);
-                return enermyPool[i];
+                enermyList[i].gameObject.SetActive(true);
+                return enermyList[i];
             }
         }
         return null;

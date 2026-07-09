@@ -32,7 +32,7 @@ public class BuildManger : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 100f, clickLayer))
         {
-            Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
+            // Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
             TileInfo tileInfo = hit.collider.GetComponent<TileInfo>();
 
             if (hit.collider.CompareTag("Create") && tileInfo.isBuild != true && GameManager.Instance.money >= 30)

@@ -21,6 +21,7 @@ public class EnermyController : MonoBehaviour
         if (wayPoints == null) return;
         GoWay();
     }
+    
     public void Init(Transform wayPosition)
     {
         wayPoints = wayPosition;
@@ -31,9 +32,6 @@ public class EnermyController : MonoBehaviour
         currentAttack = enermyStatus.attack;
     }
 
-    void Start()
-    {
-    }
     public void GoWay()
     {
         transform.position = Vector3.MoveTowards(transform.position, wayPoints.GetChild(current).position, currentSpeed * Time.deltaTime);
