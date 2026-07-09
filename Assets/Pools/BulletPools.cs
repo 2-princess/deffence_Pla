@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class BulletPools : MonoBehaviour
 {
     public static BulletPools Instance;
-    public List<GameObject> bullets = new List<GameObject>();
+    public List<BulletController> bullets = new List<BulletController>();
     public GameObject bullet;
 
     void Awake()
@@ -17,7 +18,9 @@ public class BulletPools : MonoBehaviour
         // 총알 풀링
         for (int i = 0; i < 50; i++)
         {
-            bullets.Add(Instantiate(bullet, transform.position, Quaternion.identity, transform));
+            bullet = Instantiate(bullet, transform.position, Quaternion.identity, transform);
+            BulletController controller = bullet.GetComponent<BulletController>();
+            bullets.Add(controller);
             bullets[i].gameObject.SetActive(false);
         }
     }
@@ -27,19 +30,15 @@ public class BulletPools : MonoBehaviour
     {
 
     }
-    public GameObject GetBullet()
+    public BulletController GetBullet()
     {
         for (int i = 0; i < bullets.Count; i++)
         {
-            if (!bullets[i].activeInHierarchy)
+            if (!bullets[i].gameObject.activeInHierarchy)
             {
                 bullets[i].transform.position = transform.position;
-                bullets[i].SetActive(true);
+                bullets[i].gameObject.SetActive(true);
                 return bullets[i];
-                // BulletController bullet = bullets[i].GetComponent<BulletController>();
-                // bullet.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
-                // currentTime = 0;
-                
             }
         }
         return null;

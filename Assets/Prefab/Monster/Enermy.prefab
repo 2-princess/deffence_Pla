@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1181995257587042875}
   - component: {fileID: 5177874627868448385}
   - component: {fileID: 8576335231043662461}
+  - component: {fileID: 7271949091222941092}
   m_Layer: 0
   m_Name: Enermy
   m_TagString: Enermy
@@ -104,29 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909df3f91df6e4bf9a83110c6dcb15a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyController
-  wayPoint:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  enermy: {fileID: 4829479412866178618}
-  enermyStatus:
-    hp: 150
-    speed: 2
-    shild: 0
-    money: 30
+  enermyStatus: {fileID: 0}
+  currentHp: 0
+  currentSpeed: 0
+  currentAttack: 0
+  currentGold: 0
 --- !u!58 &8576335231043662461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -163,3 +146,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &7271949091222941092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4829479412866178618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af90d5da2843343c6b2643e6b9ba6582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnermyStatus
+  hp: 200
+  speed: 2
+  shild: 0
+  attack: 30
+  money: 20

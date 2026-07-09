@@ -5,7 +5,7 @@ public class EnermyPools : MonoBehaviour
 {
     public static EnermyPools Instance;
     public GameObject enermy;
-    public List<GameObject> enermyPool = new List<GameObject>();
+    public List<EnermyController> enermyPool = new List<EnermyController>();
     void Awake()
     {
         Instance = this;
@@ -15,18 +15,20 @@ public class EnermyPools : MonoBehaviour
     {
         for (int i = 0; i < 40; i++)
         {
+            // 에너미를 컨트롤러로 사용하기위해
             enermy = Instantiate(enermy, transform.position, Quaternion.identity, transform);
-            enermyPool.Add(enermy);
-            enermyPool[i].SetActive(false);
+            EnermyController controller = enermy.AddComponent<EnermyController>();
+            enermyPool.Add(controller);
+            enermyPool[i].gameObject.SetActive(false);
         }
     }
-    public GameObject SpawnEnermy()
+    public EnermyController SpawnEnermy()
     {
         for (int i = 0; i < enermyPool.Count; i++)
         {
-            if (!enermyPool[i].activeInHierarchy)
+            if (!enermyPool[i].gameObject.activeInHierarchy)
             {
-                enermyPool[i].SetActive(true);
+                enermyPool[i].gameObject.SetActive(true);
                 return enermyPool[i];
             }
         }

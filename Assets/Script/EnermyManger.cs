@@ -20,10 +20,9 @@ public class EnermyManger : MonoBehaviour
         responTime += Time.deltaTime;
         if (responTime > 2)
         {
-            GameObject enermy = EnermyPools.Instance.SpawnEnermy();
-            EnermyController enermyController = enermy.GetComponent<EnermyController>();
+            EnermyController enermy = EnermyPools.Instance.SpawnEnermy();
             enermy.transform.position = movePoint.GetChild(0).transform.position;
-            enermyController.Init(movePoint);
+            enermy.Init(movePoint);
             responTime = 0;
         }
     }

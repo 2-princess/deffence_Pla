@@ -1,5 +1,7 @@
+using UnityEngine;
+
 [System.Serializable]
-public class EnermyStatus
+public class EnermyStatus : MonoBehaviour
 {
     public float hp = 200;
     public float speed = 2;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8184042064954027865}
   - component: {fileID: 5465163360977661826}
   - component: {fileID: 7999780041923841422}
-  - component: {fileID: 3165755621671041247}
+  - component: {fileID: 2051942916758440992}
   m_Layer: 0
   m_Name: Thornseed
   m_TagString: Untagged
@@ -105,10 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  bulletPrefab: {fileID: 7312369889553398955, guid: b3c8daecc1a874de0b25478276eb36b7, type: 3}
-  bullets: []
-  characterStatus: {fileID: 3165755621671041247}
---- !u!114 &3165755621671041247
+  characterStatus: {fileID: 0}
+--- !u!114 &2051942916758440992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,9 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatus
   level: 0
-  attack: 40
-  attackSpeed: 5
-  bulletSpeed: 6
+  attack: 0
+  attackSpeed: 0
+  bulletSpeed: 0
   criticalPer: 0
   criticalDamage: 0
 --- !u!1 &5384902470179046190

@@ -105,8 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  bulletPrefab: {fileID: 7312369889553398955, guid: b3c8daecc1a874de0b25478276eb36b7, type: 3}
-  bullets: []
   characterStatus: {fileID: -5380589340723418610}
 --- !u!114 &-5380589340723418610
 MonoBehaviour:

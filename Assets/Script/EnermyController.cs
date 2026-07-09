@@ -4,23 +4,27 @@ using UnityEngine;
 public class EnermyController : MonoBehaviour
 {
     public EnermyStatus enermyStatus;
-    int current = 0;
+    int current;
     public float currentHp;
     public float currentSpeed;
     public float currentAttack;
     public int currentGold;
     private Transform wayPoints;
 
+    void Awake()
+    {
+        enermyStatus = GetComponent<EnermyStatus>();
+    }
     // Update is called once per frame
     void Update()
     {
         if (wayPoints == null) return;
         GoWay();
     }
-    public void Init(Transform wayposiotn)
+    public void Init(Transform wayPosition)
     {
-        wayPoints = wayposiotn;
-        current = 0;
+        wayPoints = wayPosition;
+        current = 1;
         currentHp = enermyStatus.hp;
         currentSpeed = enermyStatus.speed;
         currentGold = enermyStatus.money;

@@ -6,16 +6,8 @@ public class CharacterController : MonoBehaviour
 {
     public CharacterStatus characterStatus;
     private Transform target;
-    private GameObject bullet;
-
     private float currentTime = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    void Awake()
-    {
-        characterStatus = GetComponent<CharacterStatus>();
-    }
-
     void Start()
     {
 
@@ -25,8 +17,9 @@ public class CharacterController : MonoBehaviour
         currentTime += Time.deltaTime;
         if (target != null && currentTime >= characterStatus.attackSpeed)
         {
-            bullet = BulletPools.Instance.GetBullet();
-            Attack();
+            BulletController bullet = BulletPools.Instance.GetBullet();
+            bullet.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
+            currentTime = 0;
         }
 
     }
@@ -37,13 +30,7 @@ public class CharacterController : MonoBehaviour
         target = enermy;
         currentTime = characterStatus.attackSpeed;
     }
-    // 불렛컨에게 전달
-    void Attack()
-    {
-        BulletController bulletController = bullet.GetComponent<BulletController>();
-        bulletController.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
-        currentTime = 0;
-    }
+
     public void AttackEnd()
     {
         target = null;
