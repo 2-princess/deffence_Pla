@@ -5,6 +5,7 @@ public class BuildManger : MonoBehaviour
 {
     public static BuildManger Instance;
     public List<GameObject> currentTower;
+    [SerializeField] private LayerMask clickLayer;
 
     private void Awake()
     {
@@ -29,9 +30,9 @@ public class BuildManger : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 100f, clickLayer))
         {
-            // Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
+            Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
             TileInfo tileInfo = hit.collider.GetComponent<TileInfo>();
 
             if (hit.collider.CompareTag("Create") && tileInfo.isBuild != true && GameManager.Instance.money >= 30)
