@@ -30,13 +30,13 @@ public class BulletPools : MonoBehaviour
     {
 
     }
-    public BulletController GetBullet()
+    public BulletController GetBullet(Transform chaTransform)
     {
         for (int i = 0; i < bullets.Count; i++)
         {
             if (!bullets[i].gameObject.activeInHierarchy)
             {
-                bullets[i].transform.position = transform.position;
+                bullets[i].transform.position = chaTransform.position;
                 bullets[i].gameObject.SetActive(true);
                 return bullets[i];
             }

@@ -17,7 +17,7 @@ public class CharacterController : MonoBehaviour
         currentTime += Time.deltaTime;
         if (target != null && currentTime >= characterStatus.attackSpeed)
         {
-            BulletController bullet = BulletPools.Instance.GetBullet();
+            BulletController bullet = BulletPools.Instance.GetBullet(transform);
             bullet.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
             currentTime = 0;
         }
