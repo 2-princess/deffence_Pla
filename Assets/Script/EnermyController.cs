@@ -56,8 +56,7 @@ public class EnermyController : MonoBehaviour
         currentHp -= damage;
         if (currentHp <= 0)
         {
-            GameManager.Instance.money += currentGold;
-            GameManager.Instance.Gold();
+            GameManager.Instance.Gold(currentGold);
             gameObject.SetActive(false);
             currentHp = enermyStatus.hp;
         }

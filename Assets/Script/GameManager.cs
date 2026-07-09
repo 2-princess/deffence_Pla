@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Life();
-        Gold();
+        Gold(0);
         StageCount();
     }
 
@@ -47,8 +47,9 @@ public class GameManager : MonoBehaviour
     {
         hp.text = "HP : " + userHp.ToString();
     }
-    public void Gold()
+    public void Gold(int x)
     {
+        money += x;
         gold.text = "GOLD: " + money.ToString();
     }
     public void StageCount()

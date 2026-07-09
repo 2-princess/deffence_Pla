@@ -5,7 +5,6 @@ public class BuildManger : MonoBehaviour
 {
     public static BuildManger Instance;
     public List<GameObject> currentTower;
-    public EnermyStatus enermyStatus;
 
     private void Awake()
     {
@@ -42,7 +41,7 @@ public class BuildManger : MonoBehaviour
                 int rand = Random.Range(0, currentTower.Count);
                 Instantiate(currentTower[rand], buildPos, Quaternion.identity);
                 tileInfo.isBuild = true;
-                GameManager.Instance.money -= 30;
+                GameManager.Instance.Gold(-30);
             }
         }
     }
