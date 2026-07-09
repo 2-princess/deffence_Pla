@@ -16,7 +16,7 @@ public class RangeController : MonoBehaviour
     {
         if (collision.CompareTag("Enermy"))
         {
-            characterController.AttackStart(collision.transform);
+            characterController.Aim(collision.transform);
             // Debug.Log(transform.parent.gameObject.name + " : 적이 들어옴");
         }
     }

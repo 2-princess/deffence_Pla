@@ -52,7 +52,9 @@
     <Compile Include="Assets/Script/BuildManger.cs" />
     <Compile Include="Assets/Script/CharacterController.cs" />
     <Compile Include="Assets/Info/TileInfo.cs" />
+    <Compile Include="Assets/Pools/EnermyPools.cs" />
     <Compile Include="Assets/Script/GridManger.cs" />
+    <Compile Include="Assets/Pools/BulletPools.cs" />
     <Compile Include="Assets/Script/EnermyManger.cs" />
     <Compile Include="Assets/Script/EnermyController.cs" />
     <Compile Include="Assets/Script/GameManager.cs" />

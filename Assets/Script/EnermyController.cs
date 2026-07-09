@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class EnermyController : MonoBehaviour
 {
-    // public List<GameObject> enermys; < 적종류추가
-    public GameObject enermy;
     public EnermyStatus enermyStatus;
     int current = 0;
     public float currentHp;
@@ -16,19 +14,19 @@ public class EnermyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (wayPoints == null) return;
         GoWay();
     }
-    public void Init(Transform points)
+    public void Init(Transform wayposiotn)
     {
-        wayPoints = points;
+        wayPoints = wayposiotn;
         current = 0;
         currentHp = enermyStatus.hp;
         currentSpeed = enermyStatus.speed;
         currentGold = enermyStatus.money;
         currentAttack = enermyStatus.attack;
-
     }
-    void GoWay()
+    public void GoWay()
     {
         transform.position = Vector3.MoveTowards(transform.position, wayPoints.GetChild(current).position, currentSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, wayPoints.GetChild(current).position) < 0.1f)
@@ -47,11 +45,11 @@ public class EnermyController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-        if (currentHp < 0)
+        if (currentHp <= 0)
         {
             GameManager.Instance.money += currentGold;
             GameManager.Instance.Gold();
-            enermy.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }
