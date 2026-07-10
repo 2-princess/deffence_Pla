@@ -5547,7 +5547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManger
   sponCount: 0
-  wave: 1
 --- !u!1 &1660407285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5914,6 +5913,9 @@ MonoBehaviour:
   enermyLv2: {fileID: 813170952104130142, guid: 0cf27598ed9544d91a95aef0cc5d333f, type: 3}
   enermyPool: []
   enermyPoolLv2: []
+  enermyPrefabs:
+  - {fileID: 4829479412866178618, guid: 9dd71cf331c57435aa07f60536e72fda, type: 3}
+  - {fileID: 813170952104130142, guid: 0cf27598ed9544d91a95aef0cc5d333f, type: 3}
 --- !u!4 &1691123375
 Transform:
   m_ObjectHideFlags: 0

@@ -4,10 +4,11 @@ public class WaveManger : MonoBehaviour
 {
     public static WaveManger Instance;
     public int sponCount = 0; // 적이 몇마리 생성되었는지
-    public int wave = 1; // 현웨이브
+    private int wave = 1; // 현웨이브
     private float currentTime = 0;
     private float sponDelay = 0;
     private bool isSpon = true;
+    private int level = 0;
 
     void Awake()
     {
@@ -33,7 +34,7 @@ public class WaveManger : MonoBehaviour
         if (currentTime > 2)
         {
             sponCount++;
-            EnermyManger.Instance.SponMonster(wave);
+            EnermyManger.Instance.SponMonster(level);
             currentTime = 0;
         }
     }
@@ -54,6 +55,11 @@ public class WaveManger : MonoBehaviour
             GameManager.Instance.StageCount(wave);
             GameManager.Instance.delayTime.text = "";
             isSpon = true;
+            // 단계별 몬스터많아지면 wave%10 
+            if (wave == 2)
+            {
+                level++;
+            }
         }
     }
 

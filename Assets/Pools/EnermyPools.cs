@@ -4,10 +4,8 @@ using UnityEngine;
 public class EnermyPools : MonoBehaviour
 {
     public static EnermyPools Instance;
-    public GameObject enermy;
-    public GameObject enermyLv2;
-    public List<EnermyController> enermyPool = new List<EnermyController>();
-    public List<EnermyController> enermyPoolLv2 = new List<EnermyController>();
+    public List<List<EnermyController>> enermies = new List<List<EnermyController>>();
+    public List<GameObject> type;
     void Awake()
     {
         Instance = this;
@@ -15,40 +13,34 @@ public class EnermyPools : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < type.Count; i++)
         {
-            GameObject enermy1 = Instantiate(enermy, transform.position, Quaternion.identity, transform);
-            GameObject enermy2 = Instantiate(enermyLv2, transform.position, Quaternion.identity, transform);
-
-            EnermyController controller = enermy1.GetComponent<EnermyController>();
-            EnermyController controllerLv2 = enermy2.GetComponent<EnermyController>();
-
-            enermyPool.Add(controller);
-            enermyPoolLv2.Add(controllerLv2);
-
-            enermyPool[i].gameObject.SetActive(false);
-            enermyPoolLv2[i].gameObject.SetActive(false);
+            List<EnermyController> currentPool = new List<EnermyController>();
+            for (int j = 0; j < 20; j++)
+            {
+                GameObject monster = Instantiate(type[i], transform.position, Quaternion.identity, transform);
+                monster.SetActive(false);
+                EnermyController controller = monster.GetComponent<EnermyController>();
+                currentPool.Add(controller);
+            }
+            enermies.Add(currentPool);
         }
     }
     public EnermyController GetEnermy(int lv)
     {
-        List<EnermyController> enermyList;
-        if (lv > 1)
-        {
-            enermyList = enermyPoolLv2;
-        }
-        else
-        {
-            enermyList = enermyPool;
-        }
+        List<EnermyController> enermyList = enermies[lv];
+
         for (int i = 0; i < enermyList.Count; i++)
         {
-            if (!enermyList[i].gameObject.activeInHierarchy)
+            // Debug.Log(enermies.Count);
+            // Debug.Log(enermies[lv].Count);
+            if (!enermies[lv][i].gameObject.activeInHierarchy)
             {
-                enermyList[i].gameObject.SetActive(true);
-                return enermyList[i];
+                enermies[lv][i].gameObject.SetActive(true);
+                return enermies[lv][i];
             }
         }
+        Debug.Log("몬스터를 못찾음");
         return null;
     }
 
