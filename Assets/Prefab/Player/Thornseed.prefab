@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatus
   level: 0
+  name: Thornseed
   attack: 23
   attackSpeed: 0.4
   bulletSpeed: 6

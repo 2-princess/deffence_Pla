@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatus
   level: 0
+  name: Budling
   attack: 30
   attackSpeed: 0.6
   bulletSpeed: 4

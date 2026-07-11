@@ -73,6 +73,7 @@
     <Compile Include="Assets/SPUM/Core/Script/Data/SpumPackage.cs" />
     <Compile Include="Assets/SPUM/Script/SPUM_ShareCodeImporter.cs" />
     <Compile Include="Assets/SPUM/Core/Script/SPUM_SpriteButtonST.cs" />
+    <Compile Include="Assets/Script/UIController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />

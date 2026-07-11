@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatus
   level: 0
+  name: Acorn
   attack: 25
   attackSpeed: 0.5
   bulletSpeed: 5

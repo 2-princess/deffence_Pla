@@ -53,7 +53,8 @@ public class BuildManger : MonoBehaviour
             // 플레이어 클릭
             if (hit.collider.CompareTag("Player"))
             {
-                UIManger.Instance.OnPlus(hit.collider.transform);
+                UIManger.Instance.OnPlus(hit.collider.transform, hit.collider.gameObject);
+                // Debug.Log(hit.collider.gameObject);
             }
         }
     }
