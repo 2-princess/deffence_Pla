@@ -34,7 +34,7 @@ public class WaveManger : MonoBehaviour
         if (currentTime > 2)
         {
             sponCount++;
-            EnermyManger.Instance.SponMonster(level);
+            EnermyManger.Instance.SponMonster(0);
             currentTime = 0;
         }
     }
