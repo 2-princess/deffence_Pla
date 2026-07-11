@@ -4,6 +4,8 @@ using UnityEngine;
 public class EnermyController : MonoBehaviour
 {
     public EnermyStatus enermyStatus;
+    private Animator animator;
+    public Transform characterVisual;
     int current;
     public float currentHp;
     public float currentSpeed;
@@ -14,6 +16,7 @@ public class EnermyController : MonoBehaviour
     void Awake()
     {
         enermyStatus = GetComponent<EnermyStatus>();
+        animator = GetComponentInChildren<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -21,7 +24,7 @@ public class EnermyController : MonoBehaviour
         if (wayPoints == null) return;
         GoWay();
     }
-    
+
     public void Init(Transform wayPosition)
     {
         wayPoints = wayPosition;
@@ -30,11 +33,20 @@ public class EnermyController : MonoBehaviour
         currentSpeed = enermyStatus.speed;
         currentGold = enermyStatus.money;
         currentAttack = enermyStatus.attack;
+        characterVisual.localScale = new Vector3(1, 1, 1);
     }
 
     public void GoWay()
     {
-        transform.position = Vector3.MoveTowards(transform.position, wayPoints.GetChild(current).position, currentSpeed * Time.deltaTime);
+        Vector3 targetPosition = wayPoints.GetChild(current).position;
+        Vector3 direction = targetPosition - transform.position;
+        // 왼쪽오른쪽
+        if (direction.x > 0) characterVisual.localScale = new Vector3(-1, 1, 1);
+        else new Vector3(1, 1, 1);
+
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, currentSpeed * Time.deltaTime);
+        animator.SetBool("1_Move", true);
+
         if (Vector3.Distance(transform.position, wayPoints.GetChild(current).position) < 0.1f)
         {
             current++;

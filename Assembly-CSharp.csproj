@@ -49,19 +49,81 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.16f1/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/SPUM/Core/Script/Etc/ColorSelect.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_AnimationController.cs" />
+    <Compile Include="Assets/SPUM/Sprite_Editor(Beta)/Script/SpriteSyncManager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/Worker.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Interface/IFileHandler.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_HorseSpriteList.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_ConvertView.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/Gif/LzwEncoder.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SPUM_ImprovedClassData.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SpritePos.cs" />
     <Compile Include="Assets/Script/CharacterController.cs" />
+    <Compile Include="Assets/SPUM/Script/SaveLoadHandler/IPrefabFileHandler.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_AnimationStateElement.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SPUM_AnimationData.cs" />
     <Compile Include="Assets/Info/TileInfo.cs" />
+    <Compile Include="Assets/SPUM/Sample/Script/PlayerObj.cs" />
+    <Compile Include="Assets/SPUM/Ultimate Resource Bundle/Res/Effect/Script/EffectSampleManager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SpumPackage.cs" />
+    <Compile Include="Assets/SPUM/Script/SPUM_ShareCodeImporter.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_SpriteButtonST.cs" />
+    <Compile Include="Assets/SPUM/Core/Preset/Script/SPUM_PresetData.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_AnimationManager.cs" />
+    <Compile Include="Assets/SPUM/Sprite_Editor(Beta)/Script/SpriteEyeSync.cs" />
+    <Compile Include="Assets/SPUM/Sample/Script/PlayerManager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SPUM_CustomStyleData.cs" />
+    <Compile Include="Assets/SPUM/Sprite_Editor(Beta)/Script/SPUM_SpriteEditManager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_EyeSet.cs" />
     <Compile Include="Assets/Pools/EnermyPools.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_PaginationManager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_Button.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SPUM_ImprovedStyleData.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SoonsoonData.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_PackageButton.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/Recorder.cs" />
+    <Compile Include="Assets/Script/BillBoard.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_SpriteList.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_PackageElement.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_Manager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SPUM_MatchingList.cs" />
+    <Compile Include="Assets/SPUM/Sprite_Editor(Beta)/Script/SpriteSync.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_PackagePanel.cs" />
+    <Compile Include="Assets/SPUM/Sprite_SheetExporter(Beta)/Script/SPUM_Exporter.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/Gif/NeuQuant.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/ReflectionUtils.cs" />
+    <Compile Include="Assets/SPUM/Core/SoonsoonData/SoonsoonData.cs" />
     <Compile Include="Assets/Pools/BulletPools.cs" />
     <Compile Include="Assets/Managers/EnermyManger.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_AnimationStatePanel.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/Gif/GifFrame.cs" />
     <Compile Include="Assets/Managers/GameManager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SpumAnimationClip.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/MinAttribute.cs" />
+    <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Script/EnermyController.cs" />
+    <Compile Include="Assets/SPUM/Retro UI Set/2_ExtraScript/IconLayout.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_AnimationPackagePanel.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_PreviewItem.cs" />
     <Compile Include="Assets/Info/CharacterStatus.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_PreviewMatchingList.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_AnimationControllerPanel.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_LoadPrefabPanel.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_ImprovedTagManager.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/PreviewMatchingElement.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_AnimationPreset.cs" />
+    <Compile Include="Assets/SPUM/Script/SPUMJSON.cs" />
     <Compile Include="Assets/Script/RangeController.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SPUM_Prefabs.cs" />
     <Compile Include="Assets/Managers/BuildManger.cs" />
     <Compile Include="Assets/Managers/GridManger.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/SPUM_UIManager.cs" />
     <Compile Include="Assets/Managers/WaveManger.cs" />
     <Compile Include="Assets/Info/EnermyStatus.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Data/SpumTextureData.cs" />
+    <Compile Include="Assets/SPUM/Retro UI Set/2_ExtraScript/PageLayout.cs" />
+    <Compile Include="Assets/SPUM/Core/Script/Plugin/Moments Recorder/Scripts/Gif/GifEncoder.cs" />
     <Compile Include="Assets/Script/BulletController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1123,6 +1185,10 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.UI.Analytics">

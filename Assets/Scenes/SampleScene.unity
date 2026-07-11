@@ -5909,11 +5909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897b338be9391454ab033614f58cb3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyPools
-  enermy: {fileID: 4829479412866178618, guid: 9dd71cf331c57435aa07f60536e72fda, type: 3}
-  enermyLv2: {fileID: 813170952104130142, guid: 0cf27598ed9544d91a95aef0cc5d333f, type: 3}
-  enermyPool: []
-  enermyPoolLv2: []
-  enermyPrefabs:
+  type:
   - {fileID: 4829479412866178618, guid: 9dd71cf331c57435aa07f60536e72fda, type: 3}
   - {fileID: 813170952104130142, guid: 0cf27598ed9544d91a95aef0cc5d333f, type: 3}
 --- !u!4 &1691123375
