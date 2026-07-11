@@ -7,6 +7,7 @@ public class BuildManger : MonoBehaviour
     public static BuildManger Instance;
     public List<GameObject> currentTower;
     [SerializeField] private LayerMask clickLayer;
+    public List<CharacterController> aliveCha = new List<CharacterController>();
 
     private void Awake()
     {
@@ -46,9 +47,12 @@ public class BuildManger : MonoBehaviour
                 Vector3 buildPos = hit.collider.transform.position;
                 buildPos.y = 1;
                 int rand = Random.Range(0, currentTower.Count);
-                Instantiate(currentTower[rand], buildPos, Quaternion.identity);
-                tileInfo.isBuild = true;
-                GameManager.Instance.Gold(-30);
+                GameObject chaCon = Instantiate(currentTower[rand], buildPos, Quaternion.identity); // 캐릭생성
+
+                aliveCha.Add(chaCon.GetComponent<CharacterController>()); // 현재 생성되있는걸 저장
+
+                tileInfo.isBuild = true; // 타일 중복소환방지
+                GameManager.Instance.Gold(-30); // 캐릭생성 가격
             }
             // 플레이어 클릭
             if (hit.collider.CompareTag("Player"))
