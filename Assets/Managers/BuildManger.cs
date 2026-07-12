@@ -18,6 +18,19 @@ public class BuildManger : MonoBehaviour
         ClickBtn();
     }
 
+    // 합성
+    public void MergeCha(CharacterController selectCha)
+    {
+        for (int i = 0; i < aliveCha.Count; i++)
+        {
+            if (selectCha == aliveCha[i]) continue; // 자기랑 같으면 패스,
+            if (selectCha.name == aliveCha[i].name)
+            {
+                Debug.Log("동일찾음");
+            }
+        }
+    }
+
     void ClickBtn()
     {
         if (Input.GetMouseButtonDown(0))

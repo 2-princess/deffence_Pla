@@ -6,10 +6,13 @@ public class UIManger : MonoBehaviour
     public GameObject plusBtn;
     public RectTransform plusButton;
     public static UIManger Instance;
+    private GameObject cha;
 
     public void OnButtonClick()
     {
-        Debug.Log("클릭됨");
+        // Debug.Log(cha.name);
+        CharacterController selectCha = cha.GetComponent<CharacterController>();
+        BuildManger.Instance.MergeCha(selectCha);
     }
 
     void Awake()
@@ -19,13 +22,14 @@ public class UIManger : MonoBehaviour
     }
 
     // 합성버튼
-    public void OnPlus(Transform tr,GameObject gameObject)
+    public void OnPlus(Transform tr, GameObject gameObject)
     {
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(tr.position);
         screenPosition.y += 150f;
         plusButton.position = screenPosition;
         plusBtn.SetActive(true);
-        Debug.Log(gameObject.name);
+        cha = gameObject;
+        // Debug.Log(gameObject.name);
     }
 
     public void UIClear()
