@@ -73,7 +73,6 @@
     <Compile Include="Assets/SPUM/Core/Script/Data/SpumPackage.cs" />
     <Compile Include="Assets/SPUM/Script/SPUM_ShareCodeImporter.cs" />
     <Compile Include="Assets/SPUM/Core/Script/SPUM_SpriteButtonST.cs" />
-    <Compile Include="Assets/Script/UIController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
@@ -152,7 +151,6 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Managers/BuildManger.cs" />
-    <Compile Include="Assets/Managers/GridManger.cs" />
     <Compile Include="Assets/SPUM/Core/Script/SPUM_UIManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/Managers/WaveManger.cs" />

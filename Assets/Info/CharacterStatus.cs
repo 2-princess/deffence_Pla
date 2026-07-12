@@ -4,7 +4,7 @@ using UnityEngine;
 public class CharacterStatus : MonoBehaviour
 {
     public int level;
-    public string name;
+    public string chaName;
     public float attack;
     public float attackSpeed; // 공속
     public float bulletSpeed; // 투사체속도

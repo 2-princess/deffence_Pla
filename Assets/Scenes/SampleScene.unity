@@ -440,6 +440,13 @@ MonoBehaviour:
   - {fileID: 4013211882142832911, guid: 05931fcc450be42ab8db62f41c75928f, type: 3}
   - {fileID: 4389227661421118346, guid: bc2f6fe4ab29d47efa9b1e50228c9693, type: 3}
   - {fileID: 1911636028128508367, guid: ddb8bdaaef9814554ba990e4f3f7d86c, type: 3}
+  currentTower_Lv2:
+  - {fileID: 7316563993904183548, guid: ae567f6fe97e74af9869a9c721adfdc5, type: 3}
+  - {fileID: 1208463509554915736, guid: 66c3ae4f547fe40e998cd411ea94640a, type: 3}
+  - {fileID: 7252715008929665594, guid: 39b9dfa02319d4cd4ab255d37a8e872a, type: 3}
+  - {fileID: 6943836820547727428, guid: 88882fd445e034794ab84364fa91d246, type: 3}
+  - {fileID: 8651160954521625428, guid: f33b3644f8c524766915ed0b828a9c7a, type: 3}
+  - {fileID: 8127484699589744069, guid: c94f2d2f6b76a4fbb8ac617da3996ed3, type: 3}
   clickLayer:
     serializedVersion: 2
     m_Bits: 128

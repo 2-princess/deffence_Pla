@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd71daabfd2ca4c5fae5a4a790b7c134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatus
-  level: 0
-  name: Thornseed
+  level: 1
+  chaName: Thornseed
   attack: 23
   attackSpeed: 0.4
   bulletSpeed: 6
