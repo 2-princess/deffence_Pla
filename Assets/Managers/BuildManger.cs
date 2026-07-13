@@ -33,14 +33,20 @@ public class BuildManger : MonoBehaviour
                 {
                     int rand = Random.Range(0, currentTower.Count);
                     Transform pos = selectCha.transform;
-                    Destroy(aliveCha[i].gameObject);
-                    Destroy(selectCha.gameObject);
-                    GameObject chaCon = Instantiate(currentTower_Lv2[rand], pos.position, Quaternion.identity); // 캐릭생성
-                    aliveCha.Add(chaCon.GetComponent<CharacterController>()); // 컨형태로 저장
+                    aliveCha[i].currentTile.isBuild = false; // 원래있던 타일 활성화
+                    GameObject targetCha = aliveCha[i].gameObject;
+                    aliveCha.Remove(aliveCha[i]); // 살아있던 케릭리스트제거
+                    aliveCha.Remove(selectCha); // 선택케릭리스트제거
 
+                    Destroy(targetCha); // 살아있던 오브젝트 제거
+                    Destroy(selectCha.gameObject);  // 선택 케릭제거
+                    GameObject chaCon = Instantiate(currentTower_Lv2[rand], pos.position, Quaternion.identity); // 캐릭생성
                     UIManger.Instance.UIClear();
-                    aliveCha.Remove(aliveCha[i]);
+
+                    aliveCha.Add(chaCon.GetComponent<CharacterController>()); // 컨형태로 저장
+                    return;
                 }
+                else Debug.Log("같은게 없음");
             }
         }
     }
@@ -74,9 +80,11 @@ public class BuildManger : MonoBehaviour
                 Vector3 buildPos = hit.collider.transform.position;
                 buildPos.y = 1;
                 int rand = Random.Range(0, currentTower.Count);
-                GameObject chaCon = Instantiate(currentTower[rand], buildPos, Quaternion.identity); // 캐릭생성
-                aliveCha.Add(chaCon.GetComponent<CharacterController>()); // 현재 생성되있는걸 컨트롤러형태로 저장
                 tileInfo.isBuild = true; // 타일 중복소환방지
+                GameObject cha = Instantiate(currentTower[rand], buildPos, Quaternion.identity); // 캐릭생성
+                CharacterController chaCon = cha.GetComponent<CharacterController>(); // 캐릭의 컨트롤러
+                chaCon.currentTile = tileInfo;
+                aliveCha.Add(chaCon); // 현재 생성되있는걸 컨트롤러형태로 저장
                 GameManager.Instance.Gold(-30); // 캐릭생성 가격
             }
             // 플레이어 클릭
