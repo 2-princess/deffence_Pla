@@ -8,7 +8,7 @@ public class WaveManger : MonoBehaviour
     private float currentTime = 0;
     private float sponDelay = 0;
     private bool isSpon = true;
-    private int level = 0;
+    private int level = 0; // 잇다가 단계
 
     void Awake()
     {
@@ -24,7 +24,6 @@ public class WaveManger : MonoBehaviour
             Delay();
             sponDelay += Time.deltaTime;
         }
-
         Spon();
         Wave();
     }
@@ -55,11 +54,16 @@ public class WaveManger : MonoBehaviour
             GameManager.Instance.StageCount(wave);
             GameManager.Instance.delayTime.text = "";
             isSpon = true;
-            // 단계별 몬스터많아지면 wave%10 
-            if (wave == 2)
+            if (wave % 5 == 0) // 보스 소환
+            {
+                EnermyManger.Instance.BossSpon(0); // 보스 많아지면 List
+            }
+
+            if (wave == 2)  // 단계별 몬스터많아지면 wave%10 
             {
                 level++;
             }
+            sponDelay = 0;
         }
     }
 

@@ -5,7 +5,7 @@ public class EnermyController : MonoBehaviour
 {
     public EnermyStatus enermyStatus;
     private Animator animator;
-    public Transform characterVisual;
+    // public Transform characterVisual;
     int current;
     public float currentHp;
     public float currentSpeed;
@@ -33,7 +33,7 @@ public class EnermyController : MonoBehaviour
         currentSpeed = enermyStatus.speed;
         currentGold = enermyStatus.money;
         currentAttack = enermyStatus.attack;
-        characterVisual.localScale = new Vector3(1, 1, 1);
+        //characterVisual.localScale = new Vector3(1, 1, 1); // 에니메이션활성
     }
 
     public void GoWay()
@@ -41,11 +41,11 @@ public class EnermyController : MonoBehaviour
         Vector3 targetPosition = wayPoints.GetChild(current).position;
         Vector3 direction = targetPosition - transform.position;
         // 왼쪽오른쪽
-        if (direction.x > 0) characterVisual.localScale = new Vector3(-1, 1, 1);
-        else new Vector3(1, 1, 1);
+        // if (direction.x > 0) characterVisual.localScale = new Vector3(-1, 1, 1);
+        // else new Vector3(1, 1, 1);
 
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, currentSpeed * Time.deltaTime);
-        animator.SetBool("1_Move", true);
+        // animator.SetBool("1_Move", true);
 
         if (Vector3.Distance(transform.position, wayPoints.GetChild(current).position) < 0.1f)
         {
