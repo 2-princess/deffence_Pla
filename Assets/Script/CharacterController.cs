@@ -24,7 +24,7 @@ public class CharacterController : MonoBehaviour
         // 공격속도
         if (target != null && currentTime >= characterStatus.attackSpeed)
         {
-            BulletController bullet = BulletPools.Instance.GetBullet(transform);
+            BulletController bullet = BulletPools.Instance.GetBullet(transform, characterStatus.attackType);
             bullet.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
             currentTime = 0;
         }

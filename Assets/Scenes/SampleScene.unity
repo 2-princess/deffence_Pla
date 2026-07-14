@@ -1192,8 +1192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7533445ac14c844daaf9f095f7584175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletPools
-  bullets: []
-  bullet: {fileID: 7312369889553398955, guid: b3c8daecc1a874de0b25478276eb36b7, type: 3}
+  bulletType:
+  - {fileID: 7312369889553398955, guid: b3c8daecc1a874de0b25478276eb36b7, type: 3}
+  - {fileID: 7312369889553398955, guid: 78fe8d526bd384358ab355d687cb95e8, type: 3}
+  - {fileID: 7312369889553398955, guid: bb6534cff72ad49bfaf55838b900712a, type: 3}
 --- !u!4 &261136084
 Transform:
   m_ObjectHideFlags: 0

@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
   characterStatus: {fileID: 7666804582622862799}
+  currentTile: {fileID: 0}
 --- !u!114 &7666804582622862799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +124,8 @@ MonoBehaviour:
   chaName: Acorn_Sprite
   attack: 60
   attackSpeed: 0.5
-  bulletSpeed: 5
+  attackType: 1
+  bulletSpeed: 1
   criticalPer: 0
   criticalDamage: 0
 --- !u!135 &6450674740841388381
