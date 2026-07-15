@@ -1,12 +1,18 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 // 클릭하고 어떤걸 보여줄지 나눌려고
 public class UIManger : MonoBehaviour
 {
-    public GameObject plusBtn;
-    public RectTransform plusButton;
     public static UIManger Instance;
+    public GameObject plusBtn;
+    public GameObject status;
+    public TMP_Text statusText;
+    public RectTransform plusButton;
+
     [SerializeField] private RectTransform gmUI;
     private GameObject cha;
+
     public void OnButtonClick()
     {
         // Debug.Log(cha.name);
@@ -32,8 +38,20 @@ public class UIManger : MonoBehaviour
 
     }
 
+    public void StatusOn(GameObject gameObject)
+    {
+        CharacterController chaCon = gameObject.GetComponent<CharacterController>();
+        status.SetActive(true);
+        statusText.text =
+        "Lv : " + chaCon.characterStatus.level + "\n" +
+        "Name : " + chaCon.characterStatus.chaName + "\n" +
+        "Attack : " + chaCon.characterStatus.attack + "\n" +
+        "Attack_Speed : " + chaCon.characterStatus.attackSpeed;
+    }
+
     public void UIClear()
     {
+        status.SetActive(false);
         plusBtn.SetActive(false);
     }
 }

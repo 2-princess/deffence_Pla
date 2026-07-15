@@ -67,10 +67,9 @@ public class BuildManger : MonoBehaviour
         RaycastHit hit;
         // UI겹치는거 방지
         if (EventSystem.current.IsPointerOverGameObject()) return;
-
+        UIManger.Instance.UIClear(); // UI지우고
         if (Physics.Raycast(ray, out hit, 100f, clickLayer))
         {
-            UIManger.Instance.UIClear(); // UI지우고
             // Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
 
             TileInfo tileInfo = hit.collider.GetComponent<TileInfo>();
@@ -91,6 +90,7 @@ public class BuildManger : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 UIManger.Instance.OnPlus(hit.collider.transform, hit.collider.gameObject);
+                UIManger.Instance.StatusOn(hit.collider.gameObject);
                 // Debug.Log(hit.collider.gameObject);
             }
         }
