@@ -20,7 +20,6 @@ public class BulletController : MonoBehaviour
         }
     }
 
-
     public void Target(Transform targetTing, float damage, float bulletSpeed)
     {
         target = targetTing;
@@ -43,6 +42,9 @@ public class BulletController : MonoBehaviour
             MoveShoot();
         }
         // 적이 중간에 사라지면 처리
-        if (target == null || !target.gameObject.activeInHierarchy) bullet.SetActive(false);
+        if (target == null || !target.gameObject.activeInHierarchy)
+        {
+            bullet.SetActive(false);
+        }
     }
 }

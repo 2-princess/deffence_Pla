@@ -69,6 +69,7 @@ public class EnermyController : MonoBehaviour
             GameManager.Instance.Gold(currentGold);
             gameObject.SetActive(false);
             currentHp = enermyStatus.hp;
+            // rangeController.EnermyDead(collider);
         }
     }
 }

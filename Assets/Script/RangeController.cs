@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RangeController : MonoBehaviour
 {
     public CharacterController characterController;
+    public List<Collider> targets = new List<Collider>();
 
     void Awake()
     {
@@ -14,8 +16,9 @@ public class RangeController : MonoBehaviour
     {
         if (other.CompareTag("Enermy"))
         {
-            characterController.Aim(other.transform);
+            targets.Add(other);
             // Debug.Log(transform.parent.gameObject.name + " : 적이 들어옴");
+            if (targets.Count == 1) characterController.Aim(targets[0].transform); // 타겟이 하나뿐이면 AIM실행
         }
     }
 
@@ -23,9 +26,16 @@ public class RangeController : MonoBehaviour
     {
         if (other.CompareTag("Enermy"))
         {
-            characterController.AttackEnd();
+            targets.Remove(other);
             // Debug.Log("적이 나감");
+            if (targets.Count > 0) characterController.Aim(targets[0].transform); // 타겟이 나가도 남아있으면,
         }
     }
 
+    public void EnermyDead(Collider collider)
+    {
+        Debug.Log("죽었을때 넘겨받는거" + collider);
+        targets.Remove(collider);
+        if (targets.Count > 0) characterController.Aim(targets[0].transform);
+    }
 }

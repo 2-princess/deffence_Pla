@@ -4005,6 +4005,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManger
   plusBtn: {fileID: 1002207876}
+  status: {fileID: 109753873}
+  statusText: {fileID: 1364808915}
   plusButton: {fileID: 1002207877}
   gmUI: {fileID: 560181552}
 --- !u!1 &966608914

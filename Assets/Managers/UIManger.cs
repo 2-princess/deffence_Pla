@@ -38,6 +38,7 @@ public class UIManger : MonoBehaviour
 
     }
 
+    // 케릭 상태창
     public void StatusOn(GameObject gameObject)
     {
         CharacterController chaCon = gameObject.GetComponent<CharacterController>();
