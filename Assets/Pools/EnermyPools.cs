@@ -42,8 +42,9 @@ public class EnermyPools : MonoBehaviour
         }
     }
 
-    public void ReturnEnermy(int lv, EnermyController enermy)
+    public void ReturnEnermy(EnermyController enermy)
     {
+        int lv = enermy.lv;
         enermy.gameObject.SetActive(false);
         enermies[lv].Enqueue(enermy);
     }

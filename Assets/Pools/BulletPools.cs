@@ -13,7 +13,7 @@ public enum specialAttackType // 레벨4부터는 다른특수공격 넣을려�
 public class BulletPools : MonoBehaviour
 {
     public static BulletPools Instance;
-    public List<List<BulletController>> bulletHam = new List<List<BulletController>>();
+    public List<Queue<BulletController>> bulletHam = new List<Queue<BulletController>>();
     public List<GameObject> bulletType = new List<GameObject>();
 
 
@@ -27,36 +27,43 @@ public class BulletPools : MonoBehaviour
         // 총알 풀링 
         for (int i = 0; i < bulletType.Count; i++)
         {
-            List<BulletController> currentBullet = new List<BulletController>();
-            for (int j = 0; j < 50; j++)
+            Queue<BulletController> currentBullet = new Queue<BulletController>();
+            for (int j = 0; j < 5; j++)
             {
                 GameObject bullet = Instantiate(bulletType[i], transform.position, Quaternion.identity, transform);
                 BulletController controller = bullet.GetComponent<BulletController>();
-                currentBullet.Add(controller);
-                currentBullet[j].gameObject.SetActive(false);
+                bullet.SetActive(false);
+                currentBullet.Enqueue(controller);
+
             }
             bulletHam.Add(currentBullet); // 함에 넣기
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public BulletController GetBullet(Transform chaTransform, attackType attackType)
     {
         int type = (int)attackType;
-        List<BulletController> bullets = bulletHam[type];
-        for (int i = 0; i < bullets.Count; i++)
+        if (bulletHam[type].Count > 0)
         {
-            if (!bullets[i].gameObject.activeInHierarchy)
-            {
-                bullets[i].transform.position = chaTransform.position;
-                bullets[i].gameObject.SetActive(true);
-                return bullets[i];
-            }
+            BulletController bullet = bulletHam[type].Dequeue();
+            bullet.transform.position = chaTransform.position;
+            bullet.gameObject.SetActive(true);
+            return bullet;
         }
-        return null;
+        else
+        {
+            GameObject bullet = Instantiate(bulletType[type], transform.position, Quaternion.identity, transform);
+            BulletController controller = bullet.GetComponent<BulletController>();
+            bullet.SetActive(true);
+            bullet.transform.position = chaTransform.position;
+            return controller;
+        }
+    }
+
+    public void ReturnBullet(BulletController bullet)
+    {
+        int lv = bullet.lv;
+        bullet.gameObject.SetActive(false);
+        bulletHam[lv].Enqueue(bullet);
     }
 }

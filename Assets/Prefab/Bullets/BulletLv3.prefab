@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletController
   bullet: {fileID: 7312369889553398955}
+  lv: 2
 --- !u!135 &6294833973288748248
 SphereCollider:
   m_ObjectHideFlags: 0

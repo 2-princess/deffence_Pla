@@ -54,7 +54,7 @@ public class EnermyController : MonoBehaviour
             current++;
             if (current >= wayPoints.childCount)
             {
-                EnermyPools.Instance.ReturnEnermy(lv, this);
+                EnermyPools.Instance.ReturnEnermy(this);
                 currentHp = enermyStatus.hp;
                 GameManager.Instance.userHp -= currentAttack;
                 GameManager.Instance.Life();
@@ -69,7 +69,7 @@ public class EnermyController : MonoBehaviour
         if (currentHp <= 0)
         {
             GameManager.Instance.Gold(currentGold);
-            EnermyPools.Instance.ReturnEnermy(lv, this);
+            EnermyPools.Instance.ReturnEnermy(this);
             currentHp = enermyStatus.hp;
             // rangeController.EnermyDead(collider);
         }

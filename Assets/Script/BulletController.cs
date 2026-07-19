@@ -4,6 +4,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     public GameObject bullet;
+    public int lv;
     private Transform target;
     private float damage;
     private float bulletSpeed; // 투사체속도
@@ -15,7 +16,7 @@ public class BulletController : MonoBehaviour
             // 데미지주기위해 EnermyController호출
             EnermyController enermyController = other.GetComponent<EnermyController>();
             enermyController.TakeDamage(damage);
-            bullet.SetActive(false);
+            BulletPools.Instance.ReturnBullet(this);
             // Debug.Log(collision.name);
         }
     }
@@ -44,7 +45,7 @@ public class BulletController : MonoBehaviour
         // 적이 중간에 사라지면 처리
         if (target == null || !target.gameObject.activeInHierarchy)
         {
-            bullet.SetActive(false);
+            BulletPools.Instance.ReturnBullet(this);
         }
     }
 }
