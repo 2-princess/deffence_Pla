@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnermyPools : MonoBehaviour
 {
     public static EnermyPools Instance;
-    public List<List<EnermyController>> enermies = new List<List<EnermyController>>();
+    public List<Queue<EnermyController>> enermies = new List<Queue<EnermyController>>();
     public List<GameObject> type;
     void Awake()
     {
@@ -15,38 +15,36 @@ public class EnermyPools : MonoBehaviour
     {
         for (int i = 0; i < type.Count; i++)
         {
-            List<EnermyController> currentPool = new List<EnermyController>();
-            for (int j = 0; j < 20; j++)
+            Queue<EnermyController> currentPool = new Queue<EnermyController>();
+            for (int j = 0; j < 10; j++)
             {
                 GameObject monster = Instantiate(type[i], transform.position, Quaternion.identity, transform);
                 monster.SetActive(false);
                 EnermyController controller = monster.GetComponent<EnermyController>();
-                currentPool.Add(controller);
+                currentPool.Enqueue(controller);
             }
             enermies.Add(currentPool);
         }
     }
     public EnermyController GetEnermy(int lv)
     {
-        List<EnermyController> enermyList = enermies[lv];
-
-        for (int i = 0; i < enermyList.Count; i++)
+        if (enermies[lv].Count > 0)
         {
-            // Debug.Log(enermies.Count);
-            // Debug.Log(enermies[lv].Count);
-            if (!enermies[lv][i].gameObject.activeInHierarchy)
-            {
-                enermies[lv][i].gameObject.SetActive(true);
-                return enermies[lv][i];
-            }
+            EnermyController enermy = enermies[lv].Dequeue();
+            enermy.gameObject.SetActive(true);
+            return enermy;
         }
-        Debug.Log("몬스터를 못찾음");
-        return null;
+        else
+        {
+            GameObject monster = Instantiate(type[lv], transform.position, Quaternion.identity, transform);
+            EnermyController enermy = monster.GetComponent<EnermyController>();
+            return enermy;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ReturnEnermy(int lv, EnermyController enermy)
     {
-
+        enermy.gameObject.SetActive(false);
+        enermies[lv].Enqueue(enermy);
     }
 }

@@ -11,6 +11,7 @@ public class EnermyController : MonoBehaviour
     public float currentSpeed;
     public float currentAttack;
     public int currentGold;
+    public int lv;
     private Transform wayPoints;
 
     void Awake()
@@ -33,6 +34,7 @@ public class EnermyController : MonoBehaviour
         currentSpeed = enermyStatus.speed;
         currentGold = enermyStatus.money;
         currentAttack = enermyStatus.attack;
+        lv = enermyStatus.lv;
         //characterVisual.localScale = new Vector3(1, 1, 1); // 에니메이션활성
     }
 
@@ -52,7 +54,7 @@ public class EnermyController : MonoBehaviour
             current++;
             if (current >= wayPoints.childCount)
             {
-                gameObject.SetActive(false);
+                EnermyPools.Instance.ReturnEnermy(lv, this);
                 currentHp = enermyStatus.hp;
                 GameManager.Instance.userHp -= currentAttack;
                 GameManager.Instance.Life();
@@ -67,7 +69,7 @@ public class EnermyController : MonoBehaviour
         if (currentHp <= 0)
         {
             GameManager.Instance.Gold(currentGold);
-            gameObject.SetActive(false);
+            EnermyPools.Instance.ReturnEnermy(lv, this);
             currentHp = enermyStatus.hp;
             // rangeController.EnermyDead(collider);
         }

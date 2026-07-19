@@ -110,6 +110,7 @@ MonoBehaviour:
   currentSpeed: 0
   currentAttack: 0
   currentGold: 0
+  lv: 0
 --- !u!114 &3081318619075595855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af90d5da2843343c6b2643e6b9ba6582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyStatus
+  lv: 1
   hp: 300
   speed: 4
   shild: 0
