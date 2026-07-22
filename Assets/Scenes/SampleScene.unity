@@ -2030,7 +2030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &435115010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2046,6 +2046,7 @@ MonoBehaviour:
   gameSpeed: 1
   addGoldAmount: 1000
   testWave: 1
+  lv: 0
 --- !u!4 &435115011
 Transform:
   m_ObjectHideFlags: 0
@@ -6577,8 +6578,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyPools
   type:
-  - {fileID: 4829479412866178618, guid: 9dd71cf331c57435aa07f60536e72fda, type: 3}
+  - {fileID: 61786960036301131, guid: 9dd71cf331c57435aa07f60536e72fda, type: 3}
   - {fileID: 813170952104130142, guid: 0cf27598ed9544d91a95aef0cc5d333f, type: 3}
+  - {fileID: 813170952104130142, guid: fffafb39e8f784810ae4acb84341739f, type: 3}
+  - {fileID: 813170952104130142, guid: 91f3c7baa8e5544f1977274989181dee, type: 3}
+  - {fileID: 813170952104130142, guid: d301fabe5932a4d0ea424e4b15f63d69, type: 3}
+  - {fileID: 813170952104130142, guid: 6d03102c1d82a46c5ad3a23d5bddcb77, type: 3}
+  - {fileID: 813170952104130142, guid: a6806c40e9663417f95d48277183fd8e, type: 3}
+  - {fileID: 813170952104130142, guid: 5e635a54c12754c8485e1659ba6df298, type: 3}
+  - {fileID: 813170952104130142, guid: d83e87fc24883467bb20fbd07edcc134, type: 3}
+  - {fileID: 813170952104130142, guid: 9901554e21c714c4fb139e01d7b44a67, type: 3}
 --- !u!4 &1691123375
 Transform:
   m_ObjectHideFlags: 0

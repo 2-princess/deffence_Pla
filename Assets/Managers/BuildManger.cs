@@ -96,4 +96,14 @@ public class BuildManger : MonoBehaviour
         }
     }
 
+    public void ChaCreate(Transform transform)
+    {
+        Vector3 buildPos = transform.position;
+        buildPos.y = 1;
+        int rand = Random.Range(0, currentTower_Lv2.Count);
+        GameObject cha = Instantiate(currentTower_Lv2[rand], buildPos, Quaternion.identity); // 캐릭생성
+        CharacterController chaCon = cha.GetComponent<CharacterController>(); // 캐릭의 컨트롤러
+        aliveCha.Add(chaCon); // 현재 생성되있는걸 컨트롤러형태로 저장
+    }
+
 }
