@@ -5,10 +5,9 @@ using UnityEngine.EventSystems;
 public class BuildManger : MonoBehaviour
 {
     public static BuildManger Instance;
-    public List<GameObject> currentTower;
-    public List<GameObject> currentTower_Lv2;
+    public List<TowerList> currentTowers;
     [SerializeField] private LayerMask clickLayer;
-    public List<CharacterController> aliveCha = new List<CharacterController>();
+    private List<CharacterController> aliveCha = new List<CharacterController>();
 
     private void Awake()
     {
@@ -18,6 +17,14 @@ public class BuildManger : MonoBehaviour
     {
         ClickBtn();
     }
+
+    // 클래스를 보여주기위해
+    [System.Serializable]
+    public class TowerList
+    {
+        public List<GameObject> towers;
+    }
+
 
     // 합성
     public void MergeCha(CharacterController selectCha)
@@ -31,7 +38,7 @@ public class BuildManger : MonoBehaviour
                 CharacterStatus aliveStatus = aliveCha[i].GetComponent<CharacterStatus>();
                 if (aliveStatus.chaName == chaStatus.chaName) // 안의 스테이터스 검사
                 {
-                    int rand = Random.Range(0, currentTower.Count);
+                    int rand = Random.Range(0, currentTowers[1].towers.Count);
                     Transform pos = selectCha.transform;
                     aliveCha[i].currentTile.isBuild = false; // 원래있던 타일 활성화
                     GameObject targetCha = aliveCha[i].gameObject;
@@ -40,7 +47,7 @@ public class BuildManger : MonoBehaviour
 
                     Destroy(targetCha); // 살아있던 오브젝트 제거
                     Destroy(selectCha.gameObject);  // 선택 케릭제거
-                    GameObject chaCon = Instantiate(currentTower_Lv2[rand], pos.position, Quaternion.identity); // 캐릭생성
+                    GameObject chaCon = Instantiate(currentTowers[1].towers[rand], pos.position, Quaternion.identity); // 레벨2 캐릭생성
                     UIManger.Instance.UIClear();
 
                     aliveCha.Add(chaCon.GetComponent<CharacterController>()); // 컨형태로 저장
@@ -78,9 +85,9 @@ public class BuildManger : MonoBehaviour
             {
                 Vector3 buildPos = hit.collider.transform.position;
                 buildPos.y = 1;
-                int rand = Random.Range(0, currentTower.Count);
+                int rand = Random.Range(0, currentTowers[0].towers.Count);
                 tileInfo.isBuild = true; // 타일 중복소환방지
-                GameObject cha = Instantiate(currentTower[rand], buildPos, Quaternion.identity); // 캐릭생성
+                GameObject cha = Instantiate(currentTowers[0].towers[rand], buildPos, Quaternion.identity); // 캐릭생성
                 CharacterController chaCon = cha.GetComponent<CharacterController>(); // 캐릭의 컨트롤러
                 chaCon.currentTile = tileInfo;
                 aliveCha.Add(chaCon); // 현재 생성되있는걸 컨트롤러형태로 저장
@@ -96,12 +103,12 @@ public class BuildManger : MonoBehaviour
         }
     }
 
-    public void ChaCreate(Transform transform)
+    public void ChaCreate(Transform transform, int lv)
     {
         Vector3 buildPos = transform.position;
         buildPos.y = 1;
-        int rand = Random.Range(0, currentTower_Lv2.Count);
-        GameObject cha = Instantiate(currentTower_Lv2[rand], buildPos, Quaternion.identity); // 캐릭생성
+        int rand = Random.Range(0, currentTowers[lv].towers.Count);
+        GameObject cha = Instantiate(currentTowers[lv].towers[rand], buildPos, Quaternion.identity); // 캐릭생성
         CharacterController chaCon = cha.GetComponent<CharacterController>(); // 캐릭의 컨트롤러
         aliveCha.Add(chaCon); // 현재 생성되있는걸 컨트롤러형태로 저장
     }

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnermyStatus
   lv: 3
   hp: 1800
-  speed: 1.2
+  speed: 1.1
   shild: 0
   attack: 35
   money: 20

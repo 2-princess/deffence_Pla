@@ -7,7 +7,8 @@ public class TestManager : MonoBehaviour
     [SerializeField] private float gameSpeed = 1f;
     [SerializeField] private int addGoldAmount = 1000;
     [SerializeField] private int testWave = 1; // 웨이브변경
-    [SerializeField] private int monsterLv = 1; // 몬스터스폰 레벨
+    [SerializeField] private int monsterLv = 0; // 몬스터스폰 레벨
+    [SerializeField] private int chaLv = 0; // 케릭 스폰 레벨
     [SerializeField] private Queue<Transform> tiles = new Queue<Transform>();   // 생성위치 타일
     [SerializeField] private int chaSpon = 5; // 한번에 몇캐릭 생성
 
@@ -19,7 +20,7 @@ public class TestManager : MonoBehaviour
         {
             if (tile.CompareTag("Create"))
             {
-                Debug.Log("타일 들어옴" + tile.name);
+                // Debug.Log("타일 들어옴" + tile.name);
                 tiles.Enqueue(tile);
             }
         }
@@ -66,7 +67,7 @@ public class TestManager : MonoBehaviour
         {
             for (int i = 0; i < chaSpon; i++)
             {
-                BuildManger.Instance.ChaCreate(tiles.Dequeue().transform);
+                BuildManger.Instance.ChaCreate(tiles.Dequeue().transform, chaLv);
             }
         }
     }

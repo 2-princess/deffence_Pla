@@ -433,25 +433,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2330fa5e50324baf993c29e637a51fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildManger
-  currentTower:
-  - {fileID: 4632188461739310434, guid: 3354e33642b794069a358e557075ba62, type: 3}
-  - {fileID: 4268817303987252948, guid: 2d97142b0243241c9bd214145a07cb08, type: 3}
-  - {fileID: 4222620408349881809, guid: cebc476b874244765aaeeeeee5ef2418, type: 3}
-  - {fileID: 4013211882142832911, guid: 05931fcc450be42ab8db62f41c75928f, type: 3}
-  - {fileID: 4389227661421118346, guid: bc2f6fe4ab29d47efa9b1e50228c9693, type: 3}
-  - {fileID: 1911636028128508367, guid: ddb8bdaaef9814554ba990e4f3f7d86c, type: 3}
-  currentTower_Lv2:
-  - {fileID: 6797855346073734827, guid: b1cf1aa1d3afd4e27b3e406e19818e14, type: 3}
-  - {fileID: 6164861727265386195, guid: b12efe1e3ccb84ba3a81f9972878b4dc, type: 3}
-  - {fileID: 4298035811994687167, guid: b879cbc3321fe4554831889789cab0e8, type: 3}
-  - {fileID: 741545920738711403, guid: c21535ec096694c89bc9fe755b7f5809, type: 3}
-  - {fileID: 7446182136005593861, guid: 72fc7698eb4ee4e11a6bc11a9266db9e, type: 3}
-  - {fileID: 7388180339356343762, guid: 41042019856724f2cb79fd6a18c5ed52, type: 3}
-  - {fileID: 7397705395607129218, guid: cf17fe06e8f04438991f5bf7efcf7953, type: 3}
+  currentTowers:
+  - towers:
+    - {fileID: 7407163490977798999, guid: b9453d06223424dd4a12c6d72c84d74d, type: 3}
+    - {fileID: 4632188461739310434, guid: 3354e33642b794069a358e557075ba62, type: 3}
+    - {fileID: 4268817303987252948, guid: 2d97142b0243241c9bd214145a07cb08, type: 3}
+    - {fileID: 1911636028128508367, guid: ddb8bdaaef9814554ba990e4f3f7d86c, type: 3}
+    - {fileID: 4389227661421118346, guid: bc2f6fe4ab29d47efa9b1e50228c9693, type: 3}
+    - {fileID: 4222620408349881809, guid: cebc476b874244765aaeeeeee5ef2418, type: 3}
+    - {fileID: 4013211882142832911, guid: 05931fcc450be42ab8db62f41c75928f, type: 3}
+  - towers:
+    - {fileID: 6797855346073734827, guid: b1cf1aa1d3afd4e27b3e406e19818e14, type: 3}
+    - {fileID: 6164861727265386195, guid: b12efe1e3ccb84ba3a81f9972878b4dc, type: 3}
+    - {fileID: 4298035811994687167, guid: b879cbc3321fe4554831889789cab0e8, type: 3}
+    - {fileID: 741545920738711403, guid: c21535ec096694c89bc9fe755b7f5809, type: 3}
+    - {fileID: 7446182136005593861, guid: 72fc7698eb4ee4e11a6bc11a9266db9e, type: 3}
+    - {fileID: 7388180339356343762, guid: 41042019856724f2cb79fd6a18c5ed52, type: 3}
+    - {fileID: 7397705395607129218, guid: cf17fe06e8f04438991f5bf7efcf7953, type: 3}
+  - towers:
+    - {fileID: 8058236290128489471, guid: d776433dc2c82434ea9b0d4ebbb6506d, type: 3}
+    - {fileID: 7139858360863942987, guid: 01d7223c0f876452d95a7ce263143dea, type: 3}
+    - {fileID: 2391751617196617821, guid: b015faecbf2154403bdabd9d2841df6f, type: 3}
+    - {fileID: 4877835279298479126, guid: ac9e9afb9be00495faf48d6b2e3ebee7, type: 3}
+    - {fileID: 8805856580351565742, guid: 7282bdb5dbcee4b5f800823406d1e2f9, type: 3}
+    - {fileID: 6644084268301685014, guid: 5e7cefc0bb02e46dab788cd416bb14a0, type: 3}
+    - {fileID: 5460327250505652944, guid: d8ad1f21ab12042acbb54f22744946f3, type: 3}
   clickLayer:
     serializedVersion: 2
     m_Bits: 128
-  aliveCha: []
 --- !u!4 &75014332
 Transform:
   m_ObjectHideFlags: 0
@@ -2046,7 +2055,9 @@ MonoBehaviour:
   gameSpeed: 1
   addGoldAmount: 1000
   testWave: 1
-  lv: 0
+  monsterLv: 1
+  chaLv: 1
+  chaSpon: 5
 --- !u!4 &435115011
 Transform:
   m_ObjectHideFlags: 0
