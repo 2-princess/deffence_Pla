@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3081318619075595855}
   - component: {fileID: 3009855281609059513}
   m_Layer: 0
-  m_Name: EnermyLv2
+  m_Name: EnermyLv4
   m_TagString: Enermy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af90d5da2843343c6b2643e6b9ba6582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyStatus
-  lv: 2
+  lv: 4
   hp: 1800
   speed: 1.2
   shild: 0

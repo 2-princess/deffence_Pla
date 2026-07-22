@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class WaveManger : MonoBehaviour
@@ -33,7 +34,7 @@ public class WaveManger : MonoBehaviour
         if (currentTime > 2)
         {
             sponCount++;
-            EnermyManger.Instance.SponMonster(0); // 일단 0레벨 몬스터
+            EnermyManger.Instance.SponMonster(level); //? 단계의 몬스터 소환
             currentTime = 0;
         }
     }
@@ -59,12 +60,21 @@ public class WaveManger : MonoBehaviour
                 EnermyManger.Instance.BossSpon(0); // 보스 많아지면 List
             }
 
-            if (wave == 2)  // 단계별 몬스터많아지면 wave%10 
+            if (wave % 10 == 0)  // 10웨이브마다 소환
             {
                 level++;
             }
             sponDelay = 0;
         }
+    }
+    public void SetWave(int newWave, int newLv)
+    {
+        wave = newWave;
+        sponCount = 0;
+        currentTime = 0;
+        sponDelay = 0;
+        isSpon = true;
+        level = newLv;
     }
 
 }

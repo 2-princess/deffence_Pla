@@ -441,12 +441,13 @@ MonoBehaviour:
   - {fileID: 4389227661421118346, guid: bc2f6fe4ab29d47efa9b1e50228c9693, type: 3}
   - {fileID: 1911636028128508367, guid: ddb8bdaaef9814554ba990e4f3f7d86c, type: 3}
   currentTower_Lv2:
-  - {fileID: 7316563993904183548, guid: ae567f6fe97e74af9869a9c721adfdc5, type: 3}
-  - {fileID: 1208463509554915736, guid: 66c3ae4f547fe40e998cd411ea94640a, type: 3}
-  - {fileID: 7252715008929665594, guid: 39b9dfa02319d4cd4ab255d37a8e872a, type: 3}
-  - {fileID: 6943836820547727428, guid: 88882fd445e034794ab84364fa91d246, type: 3}
-  - {fileID: 8651160954521625428, guid: f33b3644f8c524766915ed0b828a9c7a, type: 3}
-  - {fileID: 8127484699589744069, guid: c94f2d2f6b76a4fbb8ac617da3996ed3, type: 3}
+  - {fileID: 6797855346073734827, guid: b1cf1aa1d3afd4e27b3e406e19818e14, type: 3}
+  - {fileID: 6164861727265386195, guid: b12efe1e3ccb84ba3a81f9972878b4dc, type: 3}
+  - {fileID: 4298035811994687167, guid: b879cbc3321fe4554831889789cab0e8, type: 3}
+  - {fileID: 741545920738711403, guid: c21535ec096694c89bc9fe755b7f5809, type: 3}
+  - {fileID: 7446182136005593861, guid: 72fc7698eb4ee4e11a6bc11a9266db9e, type: 3}
+  - {fileID: 7388180339356343762, guid: 41042019856724f2cb79fd6a18c5ed52, type: 3}
+  - {fileID: 7397705395607129218, guid: cf17fe06e8f04438991f5bf7efcf7953, type: 3}
   clickLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2013,6 +2014,53 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &435115009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435115011}
+  - component: {fileID: 435115010}
+  m_Layer: 0
+  m_Name: TestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &435115010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435115009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0538b3479544ab39bb82f62aeee1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestManager
+  gameSpeed: 1
+  addGoldAmount: 1000
+  testWave: 1
+--- !u!4 &435115011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435115009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443812293
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,3 +7940,4 @@ SceneRoots:
   - {fileID: 1910863559}
   - {fileID: 1691123375}
   - {fileID: 261136084}
+  - {fileID: 435115011}

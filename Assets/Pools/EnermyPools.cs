@@ -16,7 +16,7 @@ public class EnermyPools : MonoBehaviour
         for (int i = 0; i < type.Count; i++)
         {
             Queue<EnermyController> currentPool = new Queue<EnermyController>();
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < 5; j++)
             {
                 GameObject monster = Instantiate(type[i], transform.position, Quaternion.identity, transform);
                 monster.SetActive(false);
