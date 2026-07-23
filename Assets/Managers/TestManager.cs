@@ -31,7 +31,7 @@ public class TestManager : MonoBehaviour
     {
         MoneyPlus(); //! 0번키 입력시 골드추가
         Wave(); //! 1번키 입력시 웨이브이동
-        ChaSpon(); //! 2번키 입력시 chaSpon만큼 2레벨 캐릭터생성
+        ChaSpon(); //! 2번키 입력시 chaSpon만큼 레벨 캐릭터생성
     }
 
     void MoneyPlus()

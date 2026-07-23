@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyStatus
   lv: 6
-  hp: 1800
+  hp: 10000
   speed: 1.2
   shild: 0
   attack: 35

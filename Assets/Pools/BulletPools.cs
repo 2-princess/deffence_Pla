@@ -5,7 +5,8 @@ public enum attackType
 {
     lv1,
     lv2,
-    lv3
+    lv3,
+    lv4
 }
 public enum specialAttackType // 레벨4부터는 다른특수공격 넣을려고
 { }

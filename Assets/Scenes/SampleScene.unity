@@ -2055,8 +2055,8 @@ MonoBehaviour:
   gameSpeed: 1
   addGoldAmount: 1000
   testWave: 1
-  monsterLv: 1
-  chaLv: 1
+  monsterLv: 2
+  chaLv: 2
   chaSpon: 5
 --- !u!4 &435115011
 Transform:
@@ -7951,6 +7951,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1050914219}
+  - {fileID: 435115011}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
@@ -7960,4 +7961,3 @@ SceneRoots:
   - {fileID: 1910863559}
   - {fileID: 1691123375}
   - {fileID: 261136084}
-  - {fileID: 435115011}
