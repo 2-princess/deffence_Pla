@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4625226425835495669}
   - component: {fileID: 2064212081580001656}
   - component: {fileID: 7380998030745031199}
+  - component: {fileID: -8185689230984809321}
   m_Layer: 7
   m_Name: Warter
   m_TagString: Player
@@ -109,6 +110,7 @@ MonoBehaviour:
   characterStatus: {fileID: 2064212081580001656}
   currentTile: {fileID: 0}
   target: {fileID: 0}
+  skill: {fileID: -8185689230984809321}
 --- !u!114 &2064212081580001656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +152,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8185689230984809321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4222620408349881809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0c352945ac04a85956c32f66014574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NonSkill
 --- !u!1 &7869069288224556965
 GameObject:
   m_ObjectHideFlags: 0

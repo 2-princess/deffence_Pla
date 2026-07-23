@@ -433,6 +433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2330fa5e50324baf993c29e637a51fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildManger
+  clickLayer:
+    serializedVersion: 2
+    m_Bits: 128
   currentTowers:
   - towers:
     - {fileID: 7407163490977798999, guid: b9453d06223424dd4a12c6d72c84d74d, type: 3}
@@ -458,9 +461,14 @@ MonoBehaviour:
     - {fileID: 8805856580351565742, guid: 7282bdb5dbcee4b5f800823406d1e2f9, type: 3}
     - {fileID: 6644084268301685014, guid: 5e7cefc0bb02e46dab788cd416bb14a0, type: 3}
     - {fileID: 5460327250505652944, guid: d8ad1f21ab12042acbb54f22744946f3, type: 3}
-  clickLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  - towers:
+    - {fileID: 2595609281099191588, guid: ae77d79d9431445609b24980eb811ab1, type: 3}
+    - {fileID: 8719222641926301554, guid: df92beeac6e4f421d82a39ad43e4ac93, type: 3}
+    - {fileID: 7891623250055903224, guid: 934aeffc67bea4d8ab748da2b7c99839, type: 3}
+    - {fileID: 7362658597094883618, guid: e64b5d949598a436f9cceba7d7c19c79, type: 3}
+    - {fileID: 7388174909821021431, guid: 8c2b9667bc81a4f8b9f43daf2642c55f, type: 3}
+    - {fileID: 1490395860756235638, guid: b28d240c9ffa948c3bb6d7b39892b95e, type: 3}
+    - {fileID: 983899920065044363, guid: 73c35a0ef21c84aeeaf466c03d2b2d58, type: 3}
 --- !u!4 &75014332
 Transform:
   m_ObjectHideFlags: 0
@@ -1282,6 +1290,7 @@ MonoBehaviour:
   - {fileID: 7312369889553398955, guid: b3c8daecc1a874de0b25478276eb36b7, type: 3}
   - {fileID: 7312369889553398955, guid: 78fe8d526bd384358ab355d687cb95e8, type: 3}
   - {fileID: 7312369889553398955, guid: bb6534cff72ad49bfaf55838b900712a, type: 3}
+  - {fileID: 4894259841956175936, guid: 22231ce8954dd4f50857b9b7c380ce2e, type: 3}
 --- !u!4 &261136084
 Transform:
   m_ObjectHideFlags: 0

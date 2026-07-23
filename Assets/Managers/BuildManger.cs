@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 public class BuildManger : MonoBehaviour
 {
     public static BuildManger Instance;
-    public List<TowerList> currentTowers;
     [SerializeField] private LayerMask clickLayer;
+    public List<TowerList> currentTowers;
     private List<CharacterController> aliveCha = new List<CharacterController>();
 
     private void Awake()

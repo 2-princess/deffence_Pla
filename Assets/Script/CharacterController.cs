@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour
     public Transform target;
     private float currentTime = 0;
     private float attackSpeed = 0;
+    [SerializeField] private BaseSkill skill;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
@@ -22,8 +23,9 @@ public class CharacterController : MonoBehaviour
         // 공격속도
         if (target != null && currentTime >= attackSpeed)
         {
-            BulletController bullet = BulletPools.Instance.GetBullet(transform, characterStatus.attackType);
-            bullet.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
+            skill.UseSkill(transform, target);
+            // BulletController bullet = BulletPools.Instance.GetBullet(transform, characterStatus.attackType);
+            // bullet.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
             currentTime = 0;
         }
     }
