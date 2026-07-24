@@ -74,4 +74,12 @@ public class EnermyController : MonoBehaviour
             // rangeController.EnermyDead(collider);
         }
     }
+    public void SlowEnermy(float x)
+    {
+        currentSpeed -= x;
+    }
+    public void SlowReturn()
+    {
+        currentSpeed = enermyStatus.speed;
+    }
 }

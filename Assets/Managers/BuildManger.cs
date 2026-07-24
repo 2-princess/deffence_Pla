@@ -8,6 +8,7 @@ public class BuildManger : MonoBehaviour
     [SerializeField] private LayerMask clickLayer;
     public List<TowerList> currentTowers;
     private List<CharacterController> aliveCha = new List<CharacterController>();
+    [SerializeField] private GameObject rangeView;
 
     private void Awake()
     {
@@ -75,6 +76,7 @@ public class BuildManger : MonoBehaviour
         // UI겹치는거 방지
         if (EventSystem.current.IsPointerOverGameObject()) return;
         UIManger.Instance.UIClear(); // UI지우고
+        rangeView.SetActive(false); // 사거리끄고
         if (Physics.Raycast(ray, out hit, 100f, clickLayer))
         {
             // Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
@@ -96,6 +98,9 @@ public class BuildManger : MonoBehaviour
             // 플레이어 클릭
             if (hit.collider.CompareTag("Player"))
             {
+                Debug.Log("클릭됨");
+                CharacterController controller = hit.collider.gameObject.GetComponent<CharacterController>();
+                ShowRange(controller);
                 UIManger.Instance.OnPlus(hit.collider.transform, hit.collider.gameObject);
                 UIManger.Instance.StatusOn(hit.collider.gameObject);
                 // Debug.Log(hit.collider.gameObject);
@@ -103,6 +108,19 @@ public class BuildManger : MonoBehaviour
         }
     }
 
+    // 사거리 표시
+    void ShowRange(CharacterController character)
+    {
+        RangeController rangeController = character.GetComponentInChildren<RangeController>();
+        Debug.Log(rangeController);
+        float radius = rangeController.GetRange();
+        float diameter = radius * 2;
+        rangeView.transform.position = character.transform.position;
+        rangeView.transform.localScale = new Vector3(diameter, diameter, 1f);
+        rangeView.SetActive(true);
+    }
+
+    // 테스트용에서 생성
     public void ChaCreate(Transform transform, int lv)
     {
         Vector3 buildPos = transform.position;

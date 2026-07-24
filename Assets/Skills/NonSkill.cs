@@ -2,12 +2,6 @@ using UnityEngine;
 
 public class NonSkill : BaseSkill
 {
-    private CharacterStatus status;
-
-    void Awake()
-    {
-        status = GetComponent<CharacterStatus>();
-    }
 
     public override void UseSkill(Transform owner, Transform target)
     {

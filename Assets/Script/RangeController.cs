@@ -45,4 +45,11 @@ public class RangeController : MonoBehaviour
             characterController.Aim(targets[0].transform);
         }
     }
+
+    // 사거리 반환
+    public float GetRange()
+    {
+        SphereCollider rangeCollider = GetComponent<SphereCollider>();
+        return rangeCollider.radius;
+    }
 }
