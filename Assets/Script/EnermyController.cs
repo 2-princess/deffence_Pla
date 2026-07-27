@@ -43,7 +43,7 @@ public class EnermyController : MonoBehaviour
     public void GoWay()
     {
         Vector3 targetPosition = wayPoints.GetChild(current).position;
-        Vector3 direction = targetPosition - transform.position;
+        // Vector3 direction = targetPosition - transform.position;
         // 왼쪽오른쪽
         // if (direction.x > 0) characterVisual.localScale = new Vector3(-1, 1, 1);
         // else new Vector3(1, 1, 1);
