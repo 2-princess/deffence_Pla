@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public CharacterStatus characterStatus;
     public TileInfo currentTile;
     public Transform target;
     private float currentTime = 0;
     private float attackSpeed = 0;
-    [SerializeField] private BaseSkill skill;
+    public BaseSkill skill;
+    public CharacterStatus characterStatus;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    void Awake()
-    {
-        characterStatus = GetComponent<CharacterStatus>();
-    }
 
     void Update()
     {

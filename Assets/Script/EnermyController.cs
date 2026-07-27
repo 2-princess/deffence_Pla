@@ -8,6 +8,7 @@ public class EnermyController : MonoBehaviour
     // public Transform characterVisual;
     int current;
     public float currentHp;
+    public float currentArmor;
     public float currentSpeed;
     public float currentAttack;
     public int currentGold;
@@ -31,6 +32,7 @@ public class EnermyController : MonoBehaviour
         wayPoints = wayPosition;
         current = 1;
         currentHp = enermyStatus.hp;
+        currentArmor = enermyStatus.armor;
         currentSpeed = enermyStatus.speed;
         currentGold = enermyStatus.money;
         currentAttack = enermyStatus.attack;
@@ -74,12 +76,23 @@ public class EnermyController : MonoBehaviour
             // rangeController.EnermyDead(collider);
         }
     }
+    //? 이감
     public void SlowEnermy(float x)
     {
-        currentSpeed -= x;
+        currentSpeed *= (1f - x);
+        // Debug.Log($"기본속도: {enermyStatus.speed}, 둔화율: {(1f - x)}, 현재속도: {currentSpeed}");
     }
     public void SlowReturn()
     {
         currentSpeed = enermyStatus.speed;
+    }
+    //? 방깍
+    public void ArmorDown(float x)
+    {
+        currentArmor -= x;
+    }
+    public void ArmorReturn()
+    {
+        currentArmor = enermyStatus.armor;
     }
 }
