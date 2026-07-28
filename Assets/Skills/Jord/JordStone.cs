@@ -9,6 +9,7 @@ public class JordStone : MonoBehaviour
 
     void OnEnable()
     {
+        current = 0;
         Vector3 position = wayPoints.GetChild(0).position;
         transform.position = new Vector3(position.x, transform.position.y, position.z);
     }
@@ -33,7 +34,6 @@ public class JordStone : MonoBehaviour
             }
             if (current >= wayPoints.childCount)
             {
-                current = 0;
                 gameObject.SetActive(false);
             }
         }

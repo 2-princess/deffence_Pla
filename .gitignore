@@ -6,5 +6,6 @@
 [Ll]ogs/
 UserSettings/
 
-.vscode/
+.vs/
+.idea/
 .DS_Store
