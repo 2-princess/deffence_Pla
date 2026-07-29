@@ -72,6 +72,7 @@
     <Compile Include="Assets/Managers/UIManger.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets/Skills/Jord/JordStone.cs" />
+    <Compile Include="Assets/Skills/Baldur/BaldurSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Pools/BulletPools.cs" />
     <Compile Include="Assets/Managers/EnermyManger.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Managers/BuildManger.cs" />
+    <Compile Include="Assets/Skills/Baldur/BaldurRaser.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/Skills/NonSkill.cs" />
     <Compile Include="Assets/Managers/WaveManger.cs" />

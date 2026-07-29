@@ -110,13 +110,14 @@ GameObject:
   - component: {fileID: 6135861192202568810}
   - component: {fileID: 7577676812707640409}
   - component: {fileID: 6217967941876007889}
+  - component: {fileID: 374344531451892100}
   m_Layer: 7
-  m_Name: Apollo
+  m_Name: Apollon
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3586362144834046967
 Transform:
   m_ObjectHideFlags: 0
@@ -126,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 4245559146411754399}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03744, y: 0, z: 4.60142}
+  m_LocalPosition: {x: 3, y: 0, z: 3}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -202,10 +203,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  characterStatus: {fileID: 7577676812707640409}
   currentTile: {fileID: 0}
   target: {fileID: 0}
-  skill: {fileID: 0}
+  skill: {fileID: 374344531451892100}
+  characterStatus: {fileID: 7577676812707640409}
 --- !u!114 &7577676812707640409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,3 +248,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &374344531451892100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245559146411754399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb51cbbca09e46418c4be11e8219333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Apollon
+  aliveCha: []
+  criticalPer: 10
+  criticalDamage: 10

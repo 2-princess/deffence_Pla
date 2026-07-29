@@ -68,12 +68,12 @@ public class EnermyController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-        if (currentHp <= 0)
+        Debug.Log(currentHp);
+        if (currentHp < 0)
         {
             GameManager.Instance.Gold(currentGold);
             EnermyPools.Instance.ReturnEnermy(this);
             currentHp = enermyStatus.hp;
-            // rangeController.EnermyDead(collider);
         }
     }
     //? 이감
