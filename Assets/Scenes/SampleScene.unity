@@ -7942,6 +7942,87 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileInfo
   isBuild: 0
   tower: {fileID: 0}
+--- !u!1001 &2122249434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586362144834046967, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245559146411754399, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: m_Name
+      value: Apollon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6135861192202568810, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      propertyPath: skill
+      value: 
+      objectReference: {fileID: 2122249436}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4245559146411754399, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2122249436}
+  m_SourcePrefab: {fileID: 100100000, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+--- !u!1 &2122249435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4245559146411754399, guid: c4ae229112a144ca4b06b8628b2c125c, type: 3}
+  m_PrefabInstance: {fileID: 2122249434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2122249436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122249435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb51cbbca09e46418c4be11e8219333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Apollon
 --- !u!1 &2140153195
 GameObject:
   m_ObjectHideFlags: 0
@@ -8085,3 +8166,4 @@ SceneRoots:
   - {fileID: 1910863559}
   - {fileID: 1691123375}
   - {fileID: 261136084}
+  - {fileID: 2122249434}

@@ -6,9 +6,9 @@ public class BuildManger : MonoBehaviour
 {
     public static BuildManger Instance;
     [SerializeField] private LayerMask clickLayer;
-    public List<TowerList> currentTowers;
-    private List<CharacterController> aliveCha = new List<CharacterController>();
     [SerializeField] private GameObject rangeView;
+    public List<TowerList> currentTowers;
+    public List<CharacterController> aliveCha = new List<CharacterController>();
 
     private void Awake()
     {
@@ -45,7 +45,6 @@ public class BuildManger : MonoBehaviour
                     GameObject targetCha = aliveCha[i].gameObject;
                     aliveCha.Remove(aliveCha[i]); // 살아있던 케릭리스트제거
                     aliveCha.Remove(selectCha); // 선택케릭리스트제거
-
                     Destroy(targetCha); // 살아있던 오브젝트 제거
                     Destroy(selectCha.gameObject);  // 선택 케릭제거
                     GameObject chaCon = Instantiate(currentTowers[1].towers[rand], pos.position, Quaternion.identity); // 레벨2 캐릭생성
@@ -80,7 +79,6 @@ public class BuildManger : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100f, clickLayer))
         {
             // Debug.Log("클릭한 오브젝트 : " + hit.collider.name);
-
             TileInfo tileInfo = hit.collider.GetComponent<TileInfo>();
             // 생성 타일을 클릭햇을경우
             if (hit.collider.CompareTag("Create") && tileInfo.isBuild != true && GameManager.Instance.money >= 30)
