@@ -68,7 +68,7 @@ public class EnermyController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-        Debug.Log(currentHp);
+        // Debug.Log(currentHp);
         if (currentHp < 0)
         {
             GameManager.Instance.Gold(currentGold);

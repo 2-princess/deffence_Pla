@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaldurRaser : MonoBehaviour
 {
-    public HashSet<EnermyController> targets = new HashSet<EnermyController>();
+    private HashSet<EnermyController> targets = new HashSet<EnermyController>();
     public int stack = 0;
 
     void OnTriggerEnter(Collider other)
