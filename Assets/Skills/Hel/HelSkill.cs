@@ -6,7 +6,8 @@ public class HelSkill : BaseSkill
     private float collTime = 5;
     private float skillTime = 0;
     private float skillDamage = 3;
-    
+    private float deadLine = 3;
+
     public override void UseSkill(Transform owner, Transform target)
     {
         hellArea.gameObject.transform.position = target.transform.position;
@@ -19,7 +20,7 @@ public class HelSkill : BaseSkill
         if (skillTime > collTime)
         {
             hellArea.gameObject.SetActive(true);
-            hellArea.AreaDamage(skillDamage);
+            hellArea.AreaDamage(skillDamage,deadLine);
         }
 
     }

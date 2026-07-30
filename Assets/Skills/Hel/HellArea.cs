@@ -35,12 +35,18 @@ public class HellArea : MonoBehaviour
         }
     }
 
-    public void AreaDamage(float damage)
+    public void AreaDamage(float damage, float deadLine)
     {
         foreach (EnermyController enermy in enermys)
         {
             // Debug.Log("퍼딜 : " + enermy.enermyStatus.hp * damage / 100);
             enermy.TakeDamage(enermy.enermyStatus.hp * damage / 100);
+
+            // 퍼센트 미만일경우 즉사
+            if (enermy.currentHp <= enermy.enermyStatus.hp * deadLine / 100)
+            {
+                EnermyPools.Instance.ReturnEnermy(enermy);
+            }
         }
     }
 
