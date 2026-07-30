@@ -20,7 +20,7 @@ public class CharacterController : MonoBehaviour
         // 공격속도
         if (target != null && currentTime >= characterStatus.attackSpeed)
         {
-            Debug.Log("캐릭 어택스피드 : " + characterStatus.attackSpeed);
+            // Debug.Log("캐릭 어택스피드 : " + characterStatus.attackSpeed);
             skill.UseSkill(transform, target);
             currentTime = 0;
         }
