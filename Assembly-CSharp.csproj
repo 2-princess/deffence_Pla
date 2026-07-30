@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets/Script/BossSkillController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
+    <Compile Include="Assets/Skills/Hades/HadesBurst.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/Skills/Hades/HadesStack.cs" />

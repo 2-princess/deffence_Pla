@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -7,7 +5,6 @@ public class CharacterController : MonoBehaviour
     public TileInfo currentTile;
     public Transform target;
     private float currentTime = 0;
-    private float attackSpeed = 0;
     public BaseSkill skill;
     public CharacterStatus characterStatus;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,11 +18,10 @@ public class CharacterController : MonoBehaviour
     {
         currentTime += Time.deltaTime;
         // 공격속도
-        if (target != null && currentTime >= attackSpeed)
+        if (target != null && currentTime >= characterStatus.attackSpeed)
         {
+            Debug.Log("캐릭 어택스피드 : " + characterStatus.attackSpeed);
             skill.UseSkill(transform, target);
-            // BulletController bullet = BulletPools.Instance.GetBullet(transform, characterStatus.attackType);
-            // bullet.Target(target, characterStatus.attack, characterStatus.bulletSpeed);
             currentTime = 0;
         }
     }
@@ -34,7 +30,6 @@ public class CharacterController : MonoBehaviour
     public void Aim(Transform enermy)
     {
         target = enermy;
-        attackSpeed = characterStatus.attackSpeed;
     }
 
 }

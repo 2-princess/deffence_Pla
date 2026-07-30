@@ -6,7 +6,7 @@ public abstract class BaseSkill : MonoBehaviour
 
     protected virtual void Awake()
     {
-        status = GetComponent<CharacterStatus>();
+        status = GetComponentInParent<CharacterStatus>();
     }
     public abstract void UseSkill(
         Transform owner,

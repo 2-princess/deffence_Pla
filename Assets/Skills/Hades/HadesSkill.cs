@@ -1,19 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HadesSkill : BaseSkill
 {
     public HadesStack hadesStack;
-    float currentTime = 0;
-    float currentStackTime = 0.3f;
+    public Canvas burstButton;
+    private float currentTime = 0;
+    private float currentStackTime = 0.3f;
+    public float skillDamage = 200;
+    private int stack = 0;
+
     public override void UseSkill(Transform owner, Transform target)
     {
-        // throw new System.NotImplementedException();
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
+        Debug.Log(status.attack);
+        BulletController bullet = BulletPools.Instance.GetBullet(transform, status.attackType);
+        bullet.Target(target, skillDamage, status.bulletSpeed);
     }
 
     // Update is called once per frame
@@ -22,8 +23,17 @@ public class HadesSkill : BaseSkill
         currentTime += Time.deltaTime;
         if (currentTime > currentStackTime)
         {
-            hadesStack.StackPlus();
+            stack = hadesStack.StackPlus();
             currentTime = 0;
         }
+    }
+
+    public void Burst()
+    {
+        skillDamage = status.attack * stack / 100;
+        stack = 0;
+        burstButton.gameObject.SetActive(false);
+        hadesStack.gameObject.SetActive(false);
+        // Debug.Log(skillDamage);
     }
 }

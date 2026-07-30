@@ -25,12 +25,13 @@ public class HadesStack : MonoBehaviour
         }
     }
 
-    public void StackPlus()
+    public int StackPlus()
     {
         foreach (GameObject enermy in enermys)
         {
             stack++;
             stackText.text = stack.ToString();
         }
+        return stack;
     }
 }
