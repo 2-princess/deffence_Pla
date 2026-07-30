@@ -30,6 +30,7 @@ public class ThenderSkill : MonoBehaviour
         {
             Debug.Log("ZeusSkill : 적이 없음");
         }
+        zeusSkill.StackPlus();
         zeusSkill.ThenderReturn(this);
     }
 }
