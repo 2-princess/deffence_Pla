@@ -71,11 +71,13 @@
     <Compile Include="Assets/Script/BillBoard.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
+    <Compile Include="Assets/Skills/Zeus/ZeusSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Managers/UIManger.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets/Skills/Jord/JordStone.cs" />
+    <Compile Include="Assets/Skills/Zeus/ThenderSkill.cs" />
     <Compile Include="Assets/Skills/Baldur/BaldurSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Pools/BulletPools.cs" />

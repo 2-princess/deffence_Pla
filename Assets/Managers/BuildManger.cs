@@ -87,7 +87,7 @@ public class BuildManger : MonoBehaviour
                 buildPos.y = 1;
                 int rand = Random.Range(0, currentTowers[0].towers.Count);
                 tileInfo.isBuild = true; // 타일 중복소환방지
-                GameObject cha = Instantiate(currentTowers[0].towers[rand], buildPos, Quaternion.identity); // 캐릭생성
+                GameObject cha = Instantiate(currentTowers[0].towers[rand], buildPos, Quaternion.identity, transform); // 캐릭생성
                 CharacterController chaCon = cha.GetComponent<CharacterController>(); // 캐릭의 컨트롤러
                 chaCon.currentTile = tileInfo;
                 aliveCha.Add(chaCon); // 현재 생성되있는걸 컨트롤러형태로 저장
