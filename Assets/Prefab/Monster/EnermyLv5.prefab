@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnermyController
   enermyStatus: {fileID: 3081318619075595855}
   currentHp: 0
+  currentArmor: 0
   currentSpeed: 0
   currentAttack: 0
   currentGold: 0
@@ -124,9 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyStatus
   lv: 5
-  hp: 10000
+  hp: 100000000
   speed: 1.2
-  shild: 0
+  armor: 0
   attack: 35
   money: 20
 --- !u!135 &3009855281609059513

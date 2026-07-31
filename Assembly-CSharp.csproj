@@ -96,6 +96,7 @@
     <Compile Include="Assets/Script/EnermyController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
+    <Compile Include="Assets/Skills/Thor/ThorSkill.cs" />
     <Compile Include="Assets/Skills/BaseSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Assets/Skills/Jord/JordSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
+    <Compile Include="Assets/Skills/Thor/GorundSkill.cs" />
     <Compile Include="Assets/Script/RangeController.cs" />
     <Compile Include="Assets/Skills/Hades/HadesSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
@@ -117,6 +119,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/Skills/NonSkill.cs" />
     <Compile Include="Assets/Managers/WaveManger.cs" />
+    <Compile Include="Assets/Skills/Thor/HamerShoot.cs" />
     <Compile Include="Assets/Info/EnermyStatus.cs" />
     <Compile Include="Assets/Skills/Gaia/GaiaArea.cs" />
     <Compile Include="Assets/Script/BulletController.cs" />
