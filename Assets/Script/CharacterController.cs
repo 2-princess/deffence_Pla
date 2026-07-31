@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
 
     void Start()
     {
-        BuffManger.Instance.ApplyApollonBuff(this);
+        BuffManger.Instance.ApplyBuff(this);
     }
 
     void Update()

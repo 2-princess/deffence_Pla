@@ -11,7 +11,7 @@ public class ApollonSkill : BaseSkill
     {
         // throw new System.NotImplementedException();
     }
-    void OnEnable()
+    void Start()
     {
         aliveCha = BuildManger.Instance.aliveCha;
         BuffManger.Instance.ApollonAdd(this);
