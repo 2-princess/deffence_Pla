@@ -13,6 +13,7 @@ public class GorundSkill : MonoBehaviour
     void Start()
     {
         thorSkill = GetComponentInParent<ThorSkill>();
+        transform.localRotation = Quaternion.Euler(45, 0, 0);
     }
 
     void OnTriggerEnter(Collider other)

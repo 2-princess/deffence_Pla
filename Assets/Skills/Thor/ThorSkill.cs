@@ -3,7 +3,7 @@ using UnityEngine;
 public class ThorSkill : BaseSkill
 {
     public HamerShoot hamerShoot;
-    public GorundSkill gorundSkill;
+    public GorundSkill groundSkill;
 
     private Transform enermy;
     private float hammerSpeed = 8;
@@ -78,7 +78,8 @@ public class ThorSkill : BaseSkill
         hammerOn = false;
         hammerState = HammerState.Stop;
         hamerShoot.StopHammer();
-        Instantiate(gorundSkill.gameObject, hamerShoot.transform.position, Quaternion.identity, transform);
+
+        Instantiate(groundSkill.gameObject, hamerShoot.transform.position, Quaternion.Euler(45f, 0f, 0f), transform);
         hammerState = HammerState.Return;
         enermy = null;
     }
