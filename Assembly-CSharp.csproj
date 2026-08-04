@@ -124,6 +124,8 @@
     <Compile Include="Assets/Managers/WaveManger.cs" />
     <Compile Include="Assets/Skills/Thor/HamerShoot.cs" />
     <Compile Include="Assets/Info/EnermyStatus.cs" />
+    <Compile Include="Assets/Skills/Poseidon/PoseidonSkill.cs" />
+    <Compile Include="Assets/Skills/Poseidon/PoseidonSkill1.cs" />
     <Compile Include="Assets/Skills/Gaia/GaiaArea.cs" />
     <Compile Include="Assets/Script/BulletController.cs" />
   </ItemGroup>
