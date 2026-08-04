@@ -17,7 +17,7 @@ public class UIManger : MonoBehaviour
     {
         // Debug.Log(cha.name);
         CharacterController selectCha = cha.GetComponent<CharacterController>();
-        BuildManger.Instance.MergeCha(selectCha);
+        MergeManager.Instance.MergeCha(selectCha);
     }
 
     void Awake()
