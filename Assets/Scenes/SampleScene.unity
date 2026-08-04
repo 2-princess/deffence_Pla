@@ -470,6 +470,18 @@ MonoBehaviour:
     - {fileID: 7388174909821021431, guid: 8c2b9667bc81a4f8b9f43daf2642c55f, type: 3}
     - {fileID: 1490395860756235638, guid: b28d240c9ffa948c3bb6d7b39892b95e, type: 3}
     - {fileID: 983899920065044363, guid: 73c35a0ef21c84aeeaf466c03d2b2d58, type: 3}
+  - towers:
+    - {fileID: 5431657895496998393, guid: fbfdaf1c36bec4d00a7654af8136b341, type: 3}
+    - {fileID: 7163735147286291684, guid: b0ea0370bf094458dbfb5129fef59e2c, type: 3}
+    - {fileID: 7695659000225533170, guid: c1ea361cc18284584a33a7f8dbf0e1b7, type: 3}
+    - {fileID: 3267015064078357543, guid: 3c8da0928afdf4941b90f7333800c4ec, type: 3}
+    - {fileID: 2685777671640159551, guid: a9dda54d799184771af49949f933b4dd, type: 3}
+    - {fileID: 2063299721879071505, guid: 86ac3f30fa5774bc6b5eabe473806504, type: 3}
+    - {fileID: 4245559146411754399, guid: f12e1d9dfdc974b58ba0941664fb06e4, type: 3}
+    - {fileID: 8038471463926635311, guid: 76e45787243d344089682cff5eeab51e, type: 3}
+    - {fileID: 6360807605709834494, guid: 555999bb744464546b7056c48d676870, type: 3}
+    - {fileID: 6717985322444801549, guid: 9e19c0cf6ddf641b08764a1e6846cd4d, type: 3}
+    - {fileID: 1510557637726525273, guid: 78192e7fa58434eb88e723fe0c6ee2ee, type: 3}
   aliveCha: []
 --- !u!4 &75014332
 Transform:
@@ -2101,7 +2113,7 @@ MonoBehaviour:
   addGoldAmount: 100000
   testWave: 1
   monsterLv: 6
-  chaLv: 2
+  chaLv: 3
   chaSpon: 5
 --- !u!4 &435115011
 Transform:
@@ -2232,13 +2244,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 927931430}
-        m_TargetAssemblyTypeName: MergeManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 2
+      - m_Target: {fileID: 927931432}
+        m_TargetAssemblyTypeName: UIManger, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: CharacterController, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

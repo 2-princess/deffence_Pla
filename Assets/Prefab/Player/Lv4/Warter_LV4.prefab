@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 1099641843892907548}
   - component: {fileID: 1781602707733658585}
   - component: {fileID: 4016518017881413054}
+  - component: {fileID: 2842515746711068720}
   m_Layer: 7
   m_Name: Warter_LV4
   m_TagString: Player
@@ -202,9 +203,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  characterStatus: {fileID: 1781602707733658585}
   currentTile: {fileID: 0}
   target: {fileID: 0}
+  skill: {fileID: 2842515746711068720}
+  characterStatus: {fileID: 1781602707733658585}
 --- !u!114 &1781602707733658585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,3 +248,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2842515746711068720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490395860756235638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0c352945ac04a85956c32f66014574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NonSkill

@@ -16,6 +16,12 @@ public class HellArea : MonoBehaviour
             CloseArea();
         }
     }
+    void OnEnable()
+    {
+        Vector3 pos = transform.position;
+        pos.y = 0.01f;
+        transform.position = pos;
+    }
 
     void OnTriggerEnter(Collider other)
     {

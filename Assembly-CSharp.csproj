@@ -83,6 +83,7 @@
     <Compile Include="Assets/Skills/Baldur/BaldurSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Pools/BulletPools.cs" />
+    <Compile Include="Assets/Script/StartScene/StartButton.cs" />
     <Compile Include="Assets/Managers/EnermyManger.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Assets/Skills/Thor/GorundSkill.cs" />
     <Compile Include="Assets/Script/RangeController.cs" />
     <Compile Include="Assets/Skills/Hades/HadesSkill.cs" />
+    <Compile Include="Assets/Script/EndScene/RestartButton.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
     <Compile Include="Assets/Skills/Gaia/GaiaSkill.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />

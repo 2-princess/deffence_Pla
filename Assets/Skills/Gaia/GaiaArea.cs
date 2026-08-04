@@ -10,6 +10,12 @@ public class GaiaArea : MonoBehaviour
     {
         gaiaSkill = GetComponentInParent<GaiaSkill>();
     }
+    void OnEnable()
+    {
+        Vector3 pos = transform.position;
+        pos.y = 0.01f;
+        transform.position = pos;
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enermy"))

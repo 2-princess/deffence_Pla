@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 4128943192217814302}
   - component: {fileID: 8690984626480308820}
   - component: {fileID: 5706334289557509568}
+  - component: {fileID: 9041368531130573309}
   m_Layer: 7
   m_Name: Earth_LV3
   m_TagString: Player
@@ -202,9 +203,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  characterStatus: {fileID: 8690984626480308820}
   currentTile: {fileID: 0}
   target: {fileID: 0}
+  skill: {fileID: 9041368531130573309}
+  characterStatus: {fileID: 8690984626480308820}
 --- !u!114 &8690984626480308820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,3 +248,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9041368531130573309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139858360863942987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0c352945ac04a85956c32f66014574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NonSkill

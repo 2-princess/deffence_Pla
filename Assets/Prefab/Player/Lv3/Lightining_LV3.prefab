@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 3101697222261031260}
   - component: {fileID: 2027992194662062284}
   - component: {fileID: 8244590419973288446}
+  - component: {fileID: 6957133584594683810}
   m_Layer: 7
   m_Name: Lightining_LV3
   m_TagString: Player
@@ -202,9 +203,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  characterStatus: {fileID: 2027992194662062284}
   currentTile: {fileID: 0}
   target: {fileID: 0}
+  skill: {fileID: 6957133584594683810}
+  characterStatus: {fileID: 2027992194662062284}
 --- !u!114 &2027992194662062284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,3 +248,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6957133584594683810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8805856580351565742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0c352945ac04a85956c32f66014574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NonSkill

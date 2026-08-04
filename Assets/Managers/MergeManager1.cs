@@ -26,13 +26,14 @@ public class MergeManager : MonoBehaviour
                     List<TowerList> currentTowers = BuildManger.Instance.currentTowers;
                     int rand = Random.Range(0, currentTowers[1].towers.Count);
                     Transform pos = selectCha.transform;
-                    aliveCha[i].currentTile.isBuild = false; // 원래있던 타일 활성화
+                    // aliveCha[i].currentTile.isBuild = false; // 원래있던 타일 활성화
                     GameObject targetCha = aliveCha[i].gameObject;
                     aliveCha.Remove(aliveCha[i]); // 살아있던 케릭리스트제거
                     aliveCha.Remove(selectCha); // 선택케릭리스트제거
                     Destroy(targetCha); // 살아있던 오브젝트 제거
                     Destroy(selectCha.gameObject);  // 선택 케릭제거
-                    GameObject chaCon = Instantiate(currentTowers[1].towers[rand], pos.position, Quaternion.identity); // 레벨2 캐릭생성
+                    int level = aliveStatus.level;
+                    GameObject chaCon = Instantiate(currentTowers[level].towers[rand], pos.position, Quaternion.identity); // 다음레벨 캐릭생성
                     UIManger.Instance.UIClear();
 
                     aliveCha.Add(chaCon.GetComponent<CharacterController>()); // 컨형태로 저장
@@ -42,4 +43,10 @@ public class MergeManager : MonoBehaviour
             }
         }
     }
+
+    void AwakeMerge(CharacterStatus aliveStatus, CharacterController selectCha)
+    {
+        CharacterStatus chaStatus = selectCha.GetComponent<CharacterStatus>();
+    }
+
 }

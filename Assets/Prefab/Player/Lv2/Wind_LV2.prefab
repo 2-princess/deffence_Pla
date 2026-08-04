@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5648175821284037057}
   - component: {fileID: 4477214607131608719}
   - component: {fileID: 2104362851789566819}
+  - component: {fileID: 4468900983159096622}
   m_Layer: 7
   m_Name: Wind_LV2
   m_TagString: Player
@@ -106,10 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e1408d26ac24fbf83e2308c9199481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  characterStatus: {fileID: 4477214607131608719}
   currentTile: {fileID: 0}
   target: {fileID: 0}
-  skill: {fileID: 0}
+  skill: {fileID: 4468900983159096622}
+  characterStatus: {fileID: 4477214607131608719}
 --- !u!114 &4477214607131608719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +152,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4468900983159096622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397705395607129218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0c352945ac04a85956c32f66014574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NonSkill
 --- !u!1 &8063761142267260421
 GameObject:
   m_ObjectHideFlags: 0
